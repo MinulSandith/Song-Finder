@@ -70,6 +70,11 @@ frontend/index.html, app.js, style.css   plain HTML/JS/CSS, no build step
 - Explicitly asked for **no README/.md files in the repo** when publishing. Don't add docs to the repo unless asked (this handoff file is meant to be pasted to you, not committed).
 - Asks before publishing; the repo was created **private** on their GitHub account (`MinulSandith`).
 
+## The user watches changes live via `dev-sync.ps1`
+- On their PC they run `dev-sync.ps1`: the app on `--reload`, pulling the session's branch every 10 s. So **commit and push each working change promptly** to your branch; that is how they see it.
+- Each cloud session has its own branch: tell the user its name early so they can run `dev-sync.ps1 -Branch <name>`.
+- Never commit `saved_songs.json` or `server.log` (tracked by mistake, but the app rewrites them locally, and touching them breaks the user's `git pull --ff-only`). Don't untrack them either: the pull would delete the user's local copies.
+
 ## Windows quirks from local development (only matter if the user returns to local)
 - Passing Sinhala text as a command-line argument to curl in Git Bash turns into `?????`; send it from a file or Python when testing.
 - Test pages were screenshotted with headless Edge; network calls were mocked for UI checks.
