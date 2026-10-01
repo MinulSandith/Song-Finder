@@ -76,6 +76,30 @@
     </div>
 
     <div id="tab-downloads" class="tab-panel" hidden>
+      <section id="bulk-section">
+        <h2>Bulk download saved songs</h2>
+        <div class="bulk-toolbar">
+          <button type="button" id="bulk-refresh">Refresh list</button>
+          <label><input type="checkbox" id="bulk-select-all" /> Select all</label>
+          <label class="bulk-mode">
+            <input type="radio" name="bulk-mode" value="audio" checked /> Audio (MP3)
+          </label>
+          <label class="bulk-mode">
+            <input type="radio" name="bulk-mode" value="video" /> Video (MP4)
+          </label>
+          <select id="bulk-resolution" disabled>
+            <option value="">Best quality</option>
+            <option value="480">480p</option>
+            <option value="720">720p</option>
+            <option value="1080">1080p</option>
+            <option value="1440">1440p</option>
+          </select>
+          <button type="button" id="bulk-start">Download selected</button>
+        </div>
+        <ul id="bulk-list"></ul>
+        <p id="bulk-status"></p>
+      </section>
+
       <section id="downloads-section">
         <h2>Downloaded MP3s</h2>
         <p class="hint">Lists every MP3 in a folder with its length. Songs longer than 5 minutes are flagged in red and can be deleted. Leave the folder empty to use the bulk-download folder.</p>
@@ -94,29 +118,6 @@
       </section>
     </div>
 
-    <section id="bulk-section">
-      <h2>Bulk download saved songs</h2>
-      <div class="bulk-toolbar">
-        <button type="button" id="bulk-refresh">Refresh list</button>
-        <label><input type="checkbox" id="bulk-select-all" /> Select all</label>
-        <label class="bulk-mode">
-          <input type="radio" name="bulk-mode" value="audio" checked /> Audio (MP3)
-        </label>
-        <label class="bulk-mode">
-          <input type="radio" name="bulk-mode" value="video" /> Video (MP4)
-        </label>
-        <select id="bulk-resolution" disabled>
-          <option value="">Best quality</option>
-          <option value="480">480p</option>
-          <option value="720">720p</option>
-          <option value="1080">1080p</option>
-          <option value="1440">1440p</option>
-        </select>
-        <button type="button" id="bulk-start">Download selected</button>
-      </div>
-      <ul id="bulk-list"></ul>
-      <p id="bulk-status"></p>
-    </section>
   </main>
 
   <footer>

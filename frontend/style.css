@@ -536,7 +536,6 @@ button:hover { opacity: 0.9; }
   background: var(--card);
   border-radius: 10px;
   padding: 16px 18px;
-  margin-top: 32px;
 }
 
 #bulk-section h2 {
@@ -640,6 +639,7 @@ button:hover { opacity: 0.9; }
   background: var(--card);
   border-radius: 10px;
   padding: 16px 18px;
+  margin-top: 32px;
 }
 
 #downloads-section h2 {

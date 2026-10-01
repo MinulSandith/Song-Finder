@@ -884,6 +884,8 @@ async function pollJobStatus(jobId, onUpdate) {
 
     if (job.status === "running") {
       setTimeout(() => pollJobStatus(jobId, onUpdate), 2000);
+    } else if (dlScannedFolder) {
+      scanDownloads(); // show the new MP3s (and any long ones) in the list below
     }
   } catch (err) {
     onUpdate({ status: "error", error: "Lost track of the download job: " + err.message });
