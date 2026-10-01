@@ -1097,7 +1097,10 @@ function renderExpand({ singers, total }, finished = true) {
     if (!s.videos.length) return;
     const section = document.createElement("section");
     section.className = "more-singer";
-    section.innerHTML = `<h3>${escapeHtml(s.singer || s.typed)} <span class="hint">${s.videos.length} video${s.videos.length === 1 ? "" : "s"}</span></h3>`;
+    const toppedUp = s.videos.filter((v) => v.topped_up).length;
+    section.innerHTML = `<h3>${escapeHtml(s.singer || s.typed)} <span class="hint">${s.videos.length} video${s.videos.length === 1 ? "" : "s"}${
+      toppedUp ? ` · ${toppedUp} from a general search for the singer` : ""
+    }</span></h3>`;
     const grid = document.createElement("div");
     grid.className = "more-grid";
     s.videos.forEach((v) => grid.appendChild(buildResultCard(v, null)));
