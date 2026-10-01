@@ -1,5 +1,6 @@
 import json
 import logging
+import re
 import sys
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
@@ -46,7 +47,7 @@ from backend.ocr import (
     suggest_songs_by_singers,
     verify_songs,
 )
-from backend.search import _normalize, search_youtube
+from backend.search import _normalize, _search, rank_by_singer, search_youtube
 
 SAVE_FILE = BASE_DIR / "saved_songs.json"
 FRONTEND_DIR = BASE_DIR / "frontend"
@@ -223,7 +224,7 @@ def _confirm_song(song: dict, singer_names: list[str]) -> Optional[dict]:
         except Exception:
             continue
         original = next(
-            (r for r in results if r["kind"] == "original" and _names_song(r["title"], song)),
+            (r for r in results if r["kind"] == "original" and _names_song(r["title"], song) and _is_single_song(r)),
             None,
         )
         if original:
@@ -274,7 +275,51 @@ def more_songs(req: MoreSongsRequest):
 
 
 EXPAND_PER_SINGER = 5
+EXPAND_MIN_PER_SINGER = 4
 EXPAND_CANDIDATES = 10  # asked for per singer: some won't be found on YouTube
+TOP_UP_SEARCH_RESULTS = 25
+SONG_MAX_SECONDS = 10 * 60  # longer uploads are albums, nonstops or compilations, not one song
+COMPILATION_WORDS = re.compile(
+    r"\b(albums?|full\s+album|non-?\s?stops?|collections?|best\s+of|jukebox|mashup|medley|"
+    r"playlist|top\s+\d+|\d+\s+songs|hits)\b",
+    re.IGNORECASE,
+)
+COMPILATION_WORDS_SINHALA = ("ඇල්බම්", "එකතුව", "නොනවතින", "නන්ස්ටොප්")
+
+
+def _is_single_song(video: dict) -> bool:
+    """False for albums, nonstops, medleys and compilations: the Expand tab offers one
+    song per video. Judged from the title and, when known, the length."""
+
+    if video.get("duration") and video["duration"] > SONG_MAX_SECONDS:
+        return False
+    title = video["title"]
+    return not COMPILATION_WORDS.search(title) and not any(w in title for w in COMPILATION_WORDS_SINHALA)
+
+
+def _top_up_videos(singer_names: list[str], already: set, needed: int) -> list[dict]:
+    """Non-cover videos naming the singer from a plain search for their name, for when
+    too few of Gemini's suggested songs could be confirmed. These are by the singer
+    but not checked against a song list, so they're marked "topped_up"."""
+
+    latin = next((n for n in singer_names if n.isascii()), None)
+    sinhala = next((n for n in singer_names if not n.isascii()), None)
+    picked = []
+    for query in (q for q in (latin, sinhala) if q):
+        if len(picked) >= needed:
+            break
+        try:
+            results = rank_by_singer(_search(f"{query} songs", TOP_UP_SEARCH_RESULTS), singer_names)
+        except Exception:
+            continue
+        for r in results:
+            if len(picked) >= needed:
+                break
+            if r["kind"] != "original" or r["id"] in already or not _is_single_song(r):
+                continue
+            already.add(r["id"])
+            picked.append({**r, "topped_up": True})
+    return picked
 
 
 @app.post("/api/expand")
@@ -309,9 +354,13 @@ def expand(req: ExpandRequest):
             if video and video["id"] not in already and len(videos) < EXPAND_PER_SINGER:
                 already.add(video["id"])
                 videos.append(video)
+        confirmed_count = len(videos)
+        if confirmed_count < EXPAND_MIN_PER_SINGER:
+            videos += _top_up_videos(singer_names, already, EXPAND_MIN_PER_SINGER - confirmed_count)
         log_event(
-            "info" if len(videos) >= EXPAND_PER_SINGER else "warning",
-            f"Expand: {len(videos)} video(s) confirmed for {info['singer'] or typed}",
+            "info" if len(videos) >= EXPAND_MIN_PER_SINGER else "warning",
+            f"Expand: {confirmed_count} video(s) confirmed for {info['singer'] or typed}"
+            + (f", {len(videos) - confirmed_count} added from a search for the singer" if len(videos) > confirmed_count else ""),
         )
         out.append(
             {
