@@ -821,7 +821,10 @@ async function downloadSingleSong(id, btn, statusSpan) {
     }
     pollJobStatus(data.job_id, (job) => {
       if (job.status === "running") {
-        statusSpan.textContent = "Downloading…";
+        statusSpan.textContent = job.current ? "Downloading…" : "Waiting in queue…";
+      } else if (job.status === "done" && (job.failed || []).length) {
+        statusSpan.textContent = "Failed — see the server console";
+        btn.disabled = false;
       } else if (job.status === "done") {
         statusSpan.textContent = `Saved to ${job.output_path}`;
         btn.disabled = false;
@@ -861,9 +864,13 @@ bulkStartBtn.addEventListener("click", async () => {
     }
     pollJobStatus(data.job_id, (job) => {
       if (job.status === "running") {
-        bulkStatus.textContent = `Downloading ${job.total} item(s)… (see the server console for live progress)`;
+        bulkStatus.textContent = job.current
+          ? `Downloading ${job.done + 1} of ${job.total}: ${job.current}`
+          : `Waiting for another download to finish… (${job.total} queued)`;
       } else if (job.status === "done") {
-        bulkStatus.textContent = `Done! Files saved to: ${job.output_path}`;
+        const failed = job.failed || [];
+        bulkStatus.textContent = `Done! ${job.total - failed.length} of ${job.total} saved to: ${job.output_path}` +
+          (failed.length ? ` — ${failed.length} failed: ${failed.join(", ")}` : "");
         bulkStartBtn.disabled = false;
       } else {
         bulkStatus.textContent = `Download failed: ${job.error || "unknown error"}`;

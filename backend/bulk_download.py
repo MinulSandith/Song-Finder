@@ -17,10 +17,13 @@ DOWNLOADS_DIR = REPO_DIR / "downloads"
 if str(REPO_DIR) not in sys.path:
     sys.path.insert(0, str(REPO_DIR))
 
-from download import download_youtube_content  # noqa: E402  (path set up above)
+from download import download_single_video  # noqa: E402  (path set up above)
 
 _jobs: dict[str, dict] = {}
 _lock = threading.Lock()
+# Held while a job downloads, so jobs (a bulk run, a single "Download audio"
+# click) also go one after another instead of in parallel.
+_run_lock = threading.Lock()
 
 
 def _ensure_ffmpeg_on_path() -> bool:
@@ -41,12 +44,13 @@ def _ensure_ffmpeg_on_path() -> bool:
 
 
 def start_bulk_download(
-    urls: list[str],
+    songs: list[dict],
     audio_only: bool = True,
     max_resolution: Optional[int] = None,
-    max_workers: int = 3,
 ) -> str:
-    if not urls:
+    """Downloads songs ({url, title}) one at a time, in the given order."""
+
+    if not songs:
         raise ValueError("No URLs to download")
 
     if not _ensure_ffmpeg_on_path():
@@ -60,25 +64,48 @@ def start_bulk_download(
     with _lock:
         _jobs[job_id] = {
             "status": "running",
-            "total": len(urls),
+            "total": len(songs),
+            "done": 0,  # finished (downloaded or failed)
+            "failed": [],  # titles that failed
+            "current": None,  # title downloading now; None while waiting for another job
             "output_path": str(DOWNLOADS_DIR),
         }
 
     kind = "audio (MP3)" if audio_only else "video (MP4)"
-    log_event("info", f"Download: started {len(urls)} item(s) as {kind}")
+    log_event("info", f"Download: queued {len(songs)} item(s) as {kind}")
 
     def run():
         try:
-            download_youtube_content(
-                urls,
-                str(DOWNLOADS_DIR),
-                max_workers=max_workers,
-                audio_only=audio_only,
-                max_resolution=max_resolution,
-            )
+            with _run_lock:
+                for i, song in enumerate(songs, start=1):
+                    title = song.get("title") or song["url"]
+                    with _lock:
+                        _jobs[job_id]["current"] = title
+                    print(f"[{i}/{len(songs)}] {title}")
+                    try:
+                        result = download_single_video(
+                            song["url"], str(DOWNLOADS_DIR), i, audio_only, max_resolution
+                        )
+                        ok = result.get("success", False)
+                        print(result.get("message", ""))
+                    except Exception as exc:
+                        ok = False
+                        print(f"Failed: {exc}")
+                    with _lock:
+                        _jobs[job_id]["done"] = i
+                        if not ok:
+                            _jobs[job_id]["failed"].append(title)
+                    if not ok:
+                        log_event("warning", f"Download: failed — {title}")
+
             with _lock:
-                _jobs[job_id]["status"] = "done"
-            log_event("success", f"Download: completed {len(urls)} item(s) → {DOWNLOADS_DIR}")
+                job = _jobs[job_id]
+                job["status"] = "done"
+                job["current"] = None
+                failed = len(job["failed"])
+            ok_count = len(songs) - failed
+            msg = f"Download: completed {ok_count}/{len(songs)} item(s) → {DOWNLOADS_DIR}"
+            log_event("success" if not failed else "warning", msg)
         except Exception as exc:
             with _lock:
                 _jobs[job_id]["status"] = "error"

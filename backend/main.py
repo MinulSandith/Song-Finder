@@ -370,14 +370,16 @@ def saved():
 @app.post("/api/bulk-download")
 def bulk_download(req: BulkDownloadRequest):
     songs = _load_saved_songs()
-    urls = [s["url"] for s in songs if s.get("id") in req.ids and s.get("url")]
+    # Saved-list order, so the first-saved song downloads first.
+    wanted = set(req.ids)
+    picked = [s for s in songs if s.get("id") in wanted and s.get("url")]
 
-    if not urls:
+    if not picked:
         raise HTTPException(status_code=400, detail="No matching saved songs found")
 
     try:
         job_id = start_bulk_download(
-            urls,
+            picked,
             audio_only=req.audio_only,
             max_resolution=req.max_resolution,
         )
@@ -386,7 +388,7 @@ def bulk_download(req: BulkDownloadRequest):
     except ValueError as exc:
         raise HTTPException(status_code=400, detail=str(exc)) from exc
 
-    return {"job_id": job_id, "count": len(urls)}
+    return {"job_id": job_id, "count": len(picked)}
 
 
 @app.get("/api/bulk-download/{job_id}")
