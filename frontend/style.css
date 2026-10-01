@@ -636,6 +636,117 @@ button:hover { opacity: 0.9; }
   font-size: 13px;
 }
 
+#downloads-section {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 16px 18px;
+}
+
+#downloads-section h2 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+#dl-form, .dl-toolbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  margin-bottom: 12px;
+  font-size: 13px;
+}
+
+#dl-folder {
+  flex: 1 1 260px;
+  min-width: 0;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #333;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.dl-check {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+#dl-form button, .dl-toolbar button {
+  padding: 8px 14px;
+  font-size: 13px;
+}
+
+#dl-status {
+  min-height: 18px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+#dl-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 480px;
+  overflow-y: auto;
+}
+
+#dl-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--bg);
+  border-left: 3px solid transparent;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 13px;
+}
+
+#dl-list li.long {
+  border-left-color: #e53935;
+  background: rgba(229, 57, 53, 0.12);
+}
+
+#dl-list li.unreadable { color: var(--muted); }
+
+#dl-list .dl-name {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#dl-list .dl-duration {
+  flex-shrink: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+#dl-list li.long .dl-duration {
+  color: #ff6b6b;
+  font-weight: 600;
+}
+
+.dl-flag {
+  flex-shrink: 0;
+  font-size: 11px;
+  font-weight: 600;
+  color: #fff;
+  background: #e53935;
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+
+.dl-delete-btn {
+  flex-shrink: 0;
+  padding: 6px 10px;
+  font-size: 12px;
+  background: #b71c1c;
+}
+
 footer {
   text-align: center;
   padding: 24px;
@@ -653,7 +764,7 @@ footer a { color: var(--muted); }
 
   main { padding: 16px; }
 
-  #ocr-section, #bulk-section { padding: 14px; }
+  #ocr-section, #bulk-section, #downloads-section { padding: 14px; }
 
   .ocr-note { margin-left: 0; }
   .ocr-label { flex-basis: 60px; }
@@ -694,7 +805,7 @@ footer a { color: var(--muted); }
   margin-bottom: 24px;
 }
 #expand-section h2 { margin: 0 0 8px; font-size: 16px; }
-#expand-section .hint { color: var(--muted); font-size: 13px; margin: 0 0 12px; }
+#expand-section .hint, #downloads-section .hint { color: var(--muted); font-size: 13px; margin: 0 0 12px; }
 #expand-form { display: flex; gap: 8px; flex-wrap: wrap; align-items: flex-start; }
 #expand-names {
   flex: 1;

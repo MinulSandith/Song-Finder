@@ -1081,3 +1081,138 @@ function renderExpand({ singers, total }) {
     expandResults.appendChild(section);
   });
 }
+
+// ---- Downloads tab ----
+// Lists the MP3s in a folder with their length; anything over 5 minutes is flagged red
+// and can be deleted one at a time or all together.
+const dlForm = document.getElementById("dl-form");
+const dlFolder = document.getElementById("dl-folder");
+const dlRecursive = document.getElementById("dl-recursive");
+const dlToolbar = document.getElementById("dl-toolbar");
+const dlOnlyLong = document.getElementById("dl-only-long");
+const dlDeleteLongBtn = document.getElementById("dl-delete-long");
+const dlReportBtn = document.getElementById("dl-report");
+const dlStatus = document.getElementById("dl-status");
+const dlList = document.getElementById("dl-list");
+
+let dlFiles = [];
+let dlErrors = [];
+let dlScannedFolder = "";
+
+function dlRequest() {
+  return { folder: dlFolder.value.trim(), recursive: dlRecursive.checked };
+}
+
+function renderDownloads() {
+  const long = dlFiles.filter((f) => f.long);
+  const totalSec = dlFiles.reduce((sum, f) => sum + f.seconds, 0);
+  dlStatus.textContent = dlFiles.length
+    ? `${dlFiles.length} MP3(s), total ${formatDuration(totalSec)} — ${long.length} longer than 5 min.` +
+      (dlErrors.length ? ` ${dlErrors.length} unreadable.` : "")
+    : `No readable MP3 files in ${dlScannedFolder}.`;
+  dlToolbar.hidden = dlFiles.length === 0;
+  dlDeleteLongBtn.disabled = long.length === 0;
+
+  dlList.innerHTML = "";
+  const shown = dlOnlyLong.checked ? long : dlFiles;
+  for (const f of shown) {
+    const li = document.createElement("li");
+    if (f.long) li.classList.add("long");
+
+    const name = document.createElement("span");
+    name.className = "dl-name";
+    name.textContent = f.name;
+    name.title = f.name;
+    li.appendChild(name);
+
+    if (f.long) {
+      const flag = document.createElement("span");
+      flag.className = "dl-flag";
+      flag.textContent = "> 5 min";
+      li.appendChild(flag);
+    }
+
+    const dur = document.createElement("span");
+    dur.className = "dl-duration";
+    dur.textContent = f.duration;
+    li.appendChild(dur);
+
+    if (f.long) {
+      const del = document.createElement("button");
+      del.type = "button";
+      del.className = "dl-delete-btn";
+      del.textContent = "Delete";
+      del.addEventListener("click", () => deleteMp3s([f.name]));
+      li.appendChild(del);
+    }
+    dlList.appendChild(li);
+  }
+
+  if (!dlOnlyLong.checked) {
+    for (const e of dlErrors) {
+      const li = document.createElement("li");
+      li.className = "unreadable";
+      li.textContent = `${e.name} — can't read (${e.error})`;
+      dlList.appendChild(li);
+    }
+  }
+}
+
+async function scanDownloads() {
+  dlStatus.textContent = "Scanning…";
+  dlList.innerHTML = "";
+  dlToolbar.hidden = true;
+  try {
+    const data = await postJson("/api/mp3-durations", dlRequest());
+    dlFiles = data.files;
+    dlErrors = data.errors;
+    dlScannedFolder = data.folder;
+    if (!dlFolder.value.trim()) dlFolder.placeholder = data.folder;
+    renderDownloads();
+  } catch (err) {
+    dlFiles = [];
+    dlErrors = [];
+    dlStatus.textContent = "Error: " + err.message;
+  }
+}
+
+async function deleteMp3s(names) {
+  const msg = names.length === 1
+    ? `Delete "${names[0]}"? This can't be undone.`
+    : `Delete ${names.length} MP3 files longer than 5 minutes? This can't be undone.`;
+  if (!confirm(msg)) return;
+
+  try {
+    const data = await postJson("/api/mp3-delete", { folder: dlScannedFolder, names });
+    const gone = new Set(data.deleted);
+    dlFiles = dlFiles.filter((f) => !gone.has(f.name));
+    renderDownloads();
+    showToast({ level: "success", message: `Deleted ${data.deleted.length} file(s).` });
+    for (const e of data.errors) showToast({ level: "error", message: `Couldn't delete ${e.name}: ${e.error}` });
+  } catch (err) {
+    showToast({ level: "error", message: "Delete failed: " + err.message });
+  }
+}
+
+dlForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  scanDownloads();
+});
+dlOnlyLong.addEventListener("change", renderDownloads);
+dlDeleteLongBtn.addEventListener("click", () => {
+  const long = dlFiles.filter((f) => f.long).map((f) => f.name);
+  if (long.length) deleteMp3s(long);
+});
+dlReportBtn.addEventListener("click", async () => {
+  try {
+    const data = await postJson("/api/mp3-durations/report", { folder: dlScannedFolder, recursive: dlRecursive.checked });
+    showToast({ level: "success", message: `Saved ${data.count} durations to ${data.path}` });
+  } catch (err) {
+    showToast({ level: "error", message: "Couldn't save list: " + err.message });
+  }
+});
+
+// Scan the default folder the first time the tab is opened.
+document.querySelector('.tab-btn[data-tab="downloads"]').addEventListener("click", () => {
+  if (!dlScannedFolder) scanDownloads();
+});

@@ -38,7 +38,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 load_dotenv(BASE_DIR / ".env")
 
 from backend.activity_log import get_events, log_event
-from backend.bulk_download import get_job_status, start_bulk_download
+from backend.bulk_download import DOWNLOADS_DIR, get_job_status, start_bulk_download
+from backend.mp3_durations import delete_files, format_duration, scan_folder, write_report
 from backend.ocr import (
     extract_songs_from_image,
     expand_singers,
@@ -92,6 +93,23 @@ class BulkDownloadRequest(BaseModel):
     ids: list[str]
     audio_only: bool = True
     max_resolution: Optional[int] = None
+
+
+class Mp3FolderRequest(BaseModel):
+    folder: str = ""  # empty = the bulk-download folder
+    recursive: bool = True
+
+
+class Mp3DeleteRequest(BaseModel):
+    folder: str = ""
+    names: list[str]
+
+
+def _mp3_folder(folder: str) -> Path:
+    path = Path(folder).expanduser() if folder.strip() else DOWNLOADS_DIR
+    if not path.is_dir():
+        raise HTTPException(status_code=400, detail=f"Not a folder: {path}")
+    return path
 
 
 def _load_saved_songs() -> list[dict]:
@@ -377,6 +395,40 @@ def bulk_download_status(job_id: str):
     if job is None:
         raise HTTPException(status_code=404, detail="Unknown job id")
     return job
+
+
+@app.post("/api/mp3-durations")
+def mp3_durations(req: Mp3FolderRequest):
+    folder = _mp3_folder(req.folder)
+    files, errors = scan_folder(folder, req.recursive)
+    total = sum(f["seconds"] for f in files)
+    return {
+        "folder": str(folder),
+        "files": files,
+        "errors": errors,
+        "total": format_duration(total),
+    }
+
+
+@app.post("/api/mp3-durations/report")
+def mp3_durations_report(req: Mp3FolderRequest):
+    folder = _mp3_folder(req.folder)
+    files, _ = scan_folder(folder, req.recursive)
+    if not files:
+        raise HTTPException(status_code=400, detail="No readable MP3 files in this folder")
+    output = folder / "durations.txt"
+    write_report(files, output)
+    log_event("success", f"Durations: wrote {len(files)} file(s) to {output}")
+    return {"path": str(output), "count": len(files)}
+
+
+@app.post("/api/mp3-delete")
+def mp3_delete(req: Mp3DeleteRequest):
+    folder = _mp3_folder(req.folder)
+    deleted, errors = delete_files(folder, req.names)
+    if deleted:
+        log_event("info", f"Deleted {len(deleted)} MP3 file(s) from {folder}")
+    return {"deleted": deleted, "errors": errors}
 
 
 # Serve the frontend last so it doesn't shadow the /api routes above.

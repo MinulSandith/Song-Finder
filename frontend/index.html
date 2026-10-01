@@ -26,6 +26,7 @@
   <nav class="tabs" role="tablist">
     <button type="button" class="tab-btn active" data-tab="scan" role="tab">Scan &amp; search</button>
     <button type="button" class="tab-btn" data-tab="expand" role="tab">Expand</button>
+    <button type="button" class="tab-btn" data-tab="downloads" role="tab">Downloads</button>
   </nav>
 
   <main>
@@ -71,6 +72,25 @@
         <p id="expand-status"></p>
         <div id="expand-summary" hidden></div>
         <div id="expand-results"></div>
+      </section>
+    </div>
+
+    <div id="tab-downloads" class="tab-panel" hidden>
+      <section id="downloads-section">
+        <h2>Downloaded MP3s</h2>
+        <p class="hint">Lists every MP3 in a folder with its length. Songs longer than 5 minutes are flagged in red and can be deleted. Leave the folder empty to use the bulk-download folder.</p>
+        <form id="dl-form">
+          <input type="text" id="dl-folder" placeholder="Folder path (empty = bulk-download folder)" autocomplete="off" />
+          <label class="dl-check"><input type="checkbox" id="dl-recursive" checked /> Include subfolders</label>
+          <button type="submit">Scan folder</button>
+        </form>
+        <div class="dl-toolbar" id="dl-toolbar" hidden>
+          <label class="dl-check"><input type="checkbox" id="dl-only-long" /> Only show &gt; 5 min</label>
+          <button type="button" id="dl-delete-long">Delete all &gt; 5 min</button>
+          <button type="button" id="dl-report">Save list to durations.txt</button>
+        </div>
+        <p id="dl-status"></p>
+        <ul id="dl-list"></ul>
       </section>
     </div>
 
