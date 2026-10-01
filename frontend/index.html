@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Song Finder</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <button type="button" id="notif-bell" class="notif-bell" aria-label="Activity log">
+      🔔<span id="notif-badge" class="notif-badge" hidden>0</span>
+    </button>
+    <div id="notif-panel" class="notif-panel" hidden>
+      <div class="notif-panel-header">
+        <span>Activity</span>
+        <button type="button" id="notif-clear">Clear</button>
+      </div>
+      <ul id="notif-list"><li class="notif-empty">No activity yet.</li></ul>
+    </div>
+
+    <h1>🎵 Song Finder</h1>
+    <p class="subtitle">Type part of a song name, preview it, then save the best match.</p>
+  </header>
+
+  <nav class="tabs" role="tablist">
+    <button type="button" class="tab-btn active" data-tab="scan" role="tab">Scan &amp; search</button>
+    <button type="button" class="tab-btn" data-tab="expand" role="tab">Expand</button>
+  </nav>
+
+  <main>
+    <div id="tab-scan" class="tab-panel">
+    <section id="ocr-section">
+      <h2>Scan a photo for song names (Sinhala)</h2>
+      <form id="ocr-form">
+        <input type="file" id="ocr-file" accept="image/*" required />
+        <button type="submit">Scan photo</button>
+      </form>
+      <p id="ocr-status"></p>
+      <ul id="ocr-list"></ul>
+      <div class="ocr-list-actions">
+        <button type="button" id="ocr-search-all" hidden>Search all again</button>
+        <button type="button" id="more-songs-btn" hidden>Find more songs by these singers</button>
+        <button type="button" id="ocr-redo" hidden>Re-check flagged (1 batched call)</button>
+      </div>
+      <div id="more-songs" hidden></div>
+    </section>
+
+    <form id="search-form">
+      <input type="text" id="query" placeholder="e.g. shape of you ed sheeran" autocomplete="off" required />
+      <button type="submit">Search</button>
+    </form>
+
+    <p id="status"></p>
+    <div id="queue-bar" hidden>
+      <span id="queue-text"></span>
+      <button type="button" id="queue-skip">Skip</button>
+      <button type="button" id="queue-stop">Stop</button>
+    </div>
+    <div id="results"></div>
+    </div>
+
+    <div id="tab-expand" class="tab-panel" hidden>
+      <section id="expand-section">
+        <h2>Expand: find songs by singer</h2>
+        <p class="hint">Type singer names (English or Sinhala), one per line or separated by commas. Gemini works out who they are and suggests songs; each one is confirmed on YouTube as a non-cover video by that singer. Up to 5 videos per singer.</p>
+        <form id="expand-form">
+          <textarea id="expand-names" rows="4" placeholder="e.g. W. D. Amaradeva, Nanda Malani, Sunil Edirisinghe" required></textarea>
+          <button type="submit" id="expand-btn">Find songs</button>
+        </form>
+        <p id="expand-status"></p>
+        <div id="expand-summary" hidden></div>
+        <div id="expand-results"></div>
+      </section>
+    </div>
+
+    <section id="bulk-section">
+      <h2>Bulk download saved songs</h2>
+      <div class="bulk-toolbar">
+        <button type="button" id="bulk-refresh">Refresh list</button>
+        <label><input type="checkbox" id="bulk-select-all" /> Select all</label>
+        <label class="bulk-mode">
+          <input type="radio" name="bulk-mode" value="audio" checked /> Audio (MP3)
+        </label>
+        <label class="bulk-mode">
+          <input type="radio" name="bulk-mode" value="video" /> Video (MP4)
+        </label>
+        <select id="bulk-resolution" disabled>
+          <option value="">Best quality</option>
+          <option value="480">480p</option>
+          <option value="720">720p</option>
+          <option value="1080">1080p</option>
+          <option value="1440">1440p</option>
+        </select>
+        <button type="button" id="bulk-start">Download selected</button>
+      </div>
+      <ul id="bulk-list"></ul>
+      <p id="bulk-status"></p>
+    </section>
+  </main>
+
+  <footer>
+    <a href="/saved_songs.json" target="_blank" rel="noopener">View saved songs file</a>
+  </footer>
+
+  <div id="toast-container"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
