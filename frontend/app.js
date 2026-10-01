@@ -1016,6 +1016,7 @@ const expandBtn = document.getElementById("expand-btn");
 const expandStatus = document.getElementById("expand-status");
 const expandSummary = document.getElementById("expand-summary");
 const expandResults = document.getElementById("expand-results");
+const EXPAND_BATCH = 10;
 
 expandForm.addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -1024,30 +1025,53 @@ expandForm.addEventListener("submit", async (e) => {
 
   expandBtn.disabled = true;
   expandStatus.classList.remove("warn");
-  expandStatus.textContent = `Finding songs for ${names.length} singer${names.length === 1 ? "" : "s"} — this can take up to a minute…`;
   expandSummary.hidden = true;
   expandResults.innerHTML = "";
 
+  // The server takes at most 20 singers per request and each one needs several YouTube
+  // lookups, so long lists go in small batches and each batch shows up as soon as it's done.
+  const unique = [...new Set(names)];
+  const batches = [];
+  for (let i = 0; i < unique.length; i += EXPAND_BATCH) batches.push(unique.slice(i, i + EXPAND_BATCH));
+
+  const singers = [];
   try {
-    let haveIds = [];
+    const haveIds = [];
     try {
-      haveIds = ((await (await fetch("/api/saved")).json()).songs || []).map((s) => s.id);
+      haveIds.push(...((await (await fetch("/api/saved")).json()).songs || []).map((s) => s.id));
     } catch (_) {
       // Only used to avoid offering videos you already saved.
     }
-    const data = await postJson("/api/expand", { names, have_ids: haveIds });
-    renderExpand(data);
-  } catch (err) {
-    expandStatus.textContent = `Couldn't expand: ${err.message || err}`;
-    expandStatus.classList.add("warn");
+
+    for (let b = 0; b < batches.length; b++) {
+      expandStatus.textContent =
+        batches.length === 1
+          ? `Finding songs for ${unique.length} singer${unique.length === 1 ? "" : "s"} — this can take up to a minute…`
+          : `Batch ${b + 1} of ${batches.length} (${singers.length} of ${unique.length} singers done) — this can take a few minutes…`;
+      try {
+        const data = await postJson("/api/expand", { names: batches[b], have_ids: haveIds });
+        data.singers.forEach((s) => s.videos.forEach((v) => haveIds.push(v.id)));
+        singers.push(...data.singers);
+        renderExpand({ singers, total: singers.reduce((n, s) => n + s.videos.length, 0) }, b + 1 === batches.length);
+      } catch (err) {
+        const left = unique.length - singers.length;
+        expandStatus.textContent = `Stopped at batch ${b + 1} of ${batches.length}: ${err.message || err}${
+          singers.length ? ` — kept the ${singers.length} singer${singers.length === 1 ? "" : "s"} done so far; ${left} left to run again.` : ""
+        }`;
+        expandStatus.classList.add("warn");
+        return;
+      }
+    }
   } finally {
     expandBtn.disabled = false;
   }
 });
 
-function renderExpand({ singers, total }) {
+function renderExpand({ singers, total }, finished = true) {
   const unknown = singers.filter((s) => !s.recognised).length;
-  expandStatus.textContent = `Done: ${total} video${total === 1 ? "" : "s"} from ${singers.length - unknown} singer${singers.length - unknown === 1 ? "" : "s"}. Save the ones you want below.`;
+  if (finished) {
+    expandStatus.textContent = `Done: ${total} video${total === 1 ? "" : "s"} from ${singers.length - unknown} singer${singers.length - unknown === 1 ? "" : "s"}. Save the ones you want below.`;
+  }
 
   // The totals: one row per singer, then the overall count.
   expandSummary.hidden = false;
