@@ -4,3 +4,4 @@ yt-dlp
 google-genai
 python-dotenv
 python-multipart
+mutagen
