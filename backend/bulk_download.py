@@ -17,7 +17,25 @@ DOWNLOADS_DIR = REPO_DIR / "downloads"
 if str(REPO_DIR) not in sys.path:
     sys.path.insert(0, str(REPO_DIR))
 
-from download import download_single_video  # noqa: E402  (path set up above)
+import download as _downloader  # noqa: E402  (path set up above)
+from download import download_single_video, extract_video_id  # noqa: E402
+
+_original_get_url_info = _downloader.get_url_info
+
+
+def _saved_link_info(url: str):
+    """Saved songs are plain watch?v=<id> links, so we already know each is
+    a single video. Answer that directly instead of letting the downloader
+    ask YouTube first (an extra request per song before the real download).
+    Anything that might be a playlist or channel still gets the real check.
+    """
+
+    if "list=" not in url and extract_video_id(url):
+        return "video", {}
+    return _original_get_url_info(url)
+
+
+_downloader.get_url_info = _saved_link_info
 
 _jobs: dict[str, dict] = {}
 _lock = threading.Lock()
