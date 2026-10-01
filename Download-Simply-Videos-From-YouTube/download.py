@@ -1,0 +1,1025 @@
+import sys
+from yt_dlp import YoutubeDL
+from yt_dlp.postprocessor import PostProcessor
+import os
+import re
+import time
+from typing import Optional, List, Dict, Tuple
+from urllib.parse import urlparse, parse_qs
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from functools import lru_cache
+
+# ext4 and most Linux filesystems cap a single filename at 255 bytes.
+MAX_FILENAME_BYTES = 255
+
+# While downloading, yt-dlp appends a per-stream suffix to the base name:
+# ".f<format_id>.<ext>.part", plus "-Frag<n>" for fragmented streams.
+# Titles are trimmed before format selection runs, so the format id and
+# extension are not yet known -- reserve room for the longest such suffix
+# instead of guessing them.
+FILENAME_SUFFIX_RESERVE = 32
+
+MAX_RETRIES = 3
+RETRY_DELAY = 2
+MAX_CONCURRENT_WORKERS = 5
+DEFAULT_CONCURRENT_WORKERS = 3
+
+
+@lru_cache(maxsize=128)
+def get_url_info(url: str) -> Tuple[str, Dict]:
+    """
+    Get URL information with caching to avoid duplicate yt-dlp calls.
+    Returns (content_type, info_dict) for efficient reuse.
+
+    Args:
+        url (str): YouTube URL to analyze
+
+    Returns:
+        Tuple[str, Dict]: (content_type, info_dict)
+        where content_type is 'video', 'playlist', or 'channel'
+    """
+
+    try:
+        ydl_opts = {
+            'quiet': True,
+            'extract_flat': True,
+            'no_warnings': True,
+            'skip_download': True,
+            'playlist_items': '1',
+        }
+
+        with YoutubeDL(ydl_opts) as ydl:
+            video_info = ydl.extract_info(url, download=False)
+
+            if video_info is None:
+                parsed_url = urlparse(url)
+                query_params = parse_qs(parsed_url.query)
+
+                if (
+                    '/@' in url or
+                    '/channel/' in url or
+                    '/c/' in url or
+                    '/user/' in url
+                ):
+                    return 'channel', {}
+
+                elif 'list' in query_params:
+                    return 'playlist', {}
+
+                else:
+                    return 'video', {}
+
+            content_type = video_info.get('_type', 'video')
+
+            if content_type == 'playlist':
+                if (
+                    video_info.get('uploader_id') and (
+                        '/@' in url or
+                        '/channel/' in url or
+                        '/c/' in url or
+                        '/user/' in url
+                    )
+                ):
+                    return 'channel', video_info
+
+                else:
+                    return 'playlist', video_info
+
+            return content_type, video_info
+
+    except Exception:
+        parsed_url = urlparse(url)
+        query_params = parse_qs(parsed_url.query)
+
+        if (
+            '/@' in url or
+            '/channel/' in url or
+            '/c/' in url or
+            '/user/' in url
+        ):
+            return 'channel', {}
+
+        elif 'list' in query_params:
+            return 'playlist', {}
+
+        else:
+            return 'video', {}
+
+
+def get_content_type(url: str) -> str:
+    """
+    Get the content type of a YouTube URL.
+
+    Args:
+        url (str): YouTube URL to analyze
+
+    Returns:
+        str: 'video', 'playlist', or 'channel'
+    """
+
+    content_type, _ = get_url_info(url)
+    return content_type
+
+
+def count_archived_entries(url: str, ydl: YoutubeDL) -> int:
+    """
+    Count how many entries of a playlist or channel are already in
+    the download archive.
+
+    yt-dlp omits archived entries from its results entirely, so a
+    fully-downloaded playlist is indistinguishable from an empty one
+    by entry count alone. This probe tells them apart.
+
+    Args:
+        url (str): Playlist or channel URL to enumerate
+        ydl (YoutubeDL): Downloader holding the loaded archive
+
+    Returns:
+        int: Number of entries already recorded in the archive
+    """
+
+    probe_options = {
+        'quiet': True,
+        'no_warnings': True,
+        'extract_flat': True,
+        'skip_download': True,
+    }
+
+    try:
+        with YoutubeDL(probe_options) as probe:
+            info = probe.extract_info(url, download=False)
+
+    except Exception:
+        return 0
+
+    entries = (info or {}).get('entries') or []
+
+    return sum(
+        1 for entry in entries
+        if entry and ydl.in_download_archive(entry)
+    )
+
+
+def truncate_to_bytes(text: str, max_bytes: int) -> str:
+    """
+    Shorten text to at most max_bytes UTF-8 bytes without splitting a
+    multi-byte character.
+
+    Args:
+        text (str): Text to shorten
+        max_bytes (int): Maximum length in bytes
+
+    Returns:
+        str: The shortened text
+    """
+
+    if max_bytes <= 0:
+        return ''
+
+    encoded = text.encode('utf-8')
+
+    if len(encoded) <= max_bytes:
+        return text
+
+    return encoded[:max_bytes].decode('utf-8', errors='ignore').rstrip()
+
+
+class FilenameLengthLimiter(PostProcessor):
+    """
+    Shorten over-long titles before download so the resulting filename
+    fits within MAX_FILENAME_BYTES.
+
+    Asks yt-dlp what it would name the file rather than re-deriving the
+    output template, so the templates in download_single_video remain the
+    single source of truth for naming.
+    """
+
+    def __init__(self, thread_id: int = 0):
+        super().__init__(None)
+        self._thread_id = thread_id
+
+    def _base_bytes(self, info: Dict) -> int:
+        """Byte length of the planned filename, excluding its extension."""
+
+        planned = self._downloader.prepare_filename(info)
+        base = os.path.splitext(os.path.basename(planned))[0]
+
+        return len(base.encode('utf-8'))
+
+    def run(self, info: Dict) -> Tuple[List[str], Dict]:
+
+        original = info.get('title')
+
+        if not original:
+            return [], info
+
+        budget = MAX_FILENAME_BYTES - FILENAME_SUFFIX_RESERVE
+
+        # Sanitising a title can change its byte length, so converge
+        # instead of trusting a single calculation.
+        for _ in range(5):
+
+            over = self._base_bytes(info) - budget
+
+            if over <= 0:
+                break
+
+            current = info['title']
+
+            shortened = truncate_to_bytes(
+                current,
+                len(current.encode('utf-8')) - over
+            )
+
+            if not shortened:
+                # The prefix and id alone fill the budget
+                info['title'] = str(info.get('id', 'video'))
+                break
+
+            if shortened == current:
+                break
+
+            info['title'] = shortened
+
+        if info['title'] == original:
+            return [], info
+
+        print(
+            f"✂️  [Thread {self._thread_id}] "
+            f"Title too long for a {MAX_FILENAME_BYTES}-byte filename, "
+            f"shortened to: {info['title']}"
+        )
+
+        return [], info
+
+
+def extract_video_id(url: str) -> Optional[str]:
+    """
+    Pull the video id out of a YouTube URL without a network request.
+
+    Used when a lookup has already failed and the URL is all that is left
+    to identify the video by, such as when checking the download archive.
+
+    Args:
+        url (str): YouTube URL
+
+    Returns:
+        Optional[str]: The video id, or None if the URL carries none
+    """
+
+    parsed = urlparse(url)
+
+    if 'youtu.be' in parsed.netloc:
+        return parsed.path.lstrip('/').split('/')[0] or None
+
+    query_id = parse_qs(parsed.query).get('v', [None])[0]
+
+    if query_id:
+        return query_id
+
+    match = re.match(
+        r'/(?:shorts|embed|live|v)/([^/?#]+)',
+        parsed.path
+    )
+
+    return match.group(1) if match else None
+
+
+def parse_multiple_urls(input_string: str) -> List[str]:
+    """
+    Parse multiple URLs from input string separated by commas,
+    spaces, newlines, or mixed formats.
+
+    Args:
+        input_string (str): String containing one or more URLs
+
+    Returns:
+        List[str]: List of cleaned URLs
+    """
+
+    urls = re.split(r'[,\s\n\t]+', input_string.strip())
+    urls = [url.strip() for url in urls if url.strip()]
+
+    valid_urls = []
+    invalid_count = 0
+
+    for url in urls:
+        if (
+            ('youtube.com' in url or 'youtu.be' in url) and (
+                '/watch?' in url or
+                '/playlist?' in url or
+                '/@' in url or
+                '/channel/' in url or
+                '/c/' in url or
+                '/user/' in url or
+                'youtu.be/' in url
+            )
+        ):
+            valid_urls.append(url)
+
+        elif url:
+            print(f"⚠️  Skipping invalid URL: {url}")
+            invalid_count += 1
+
+    if invalid_count > 0:
+        print(
+            f"💡 Found {len(valid_urls)} valid YouTube URLs, "
+            f"skipped {invalid_count} invalid entries"
+        )
+
+    return valid_urls
+
+
+def get_available_formats(url: str) -> None:
+    """
+    List available formats for debugging purposes.
+
+    Args:
+        url (str): YouTube URL to check formats for
+    """
+
+    ydl_opts = {
+        'listformats': True,
+        'quiet': False
+    }
+
+    try:
+        with YoutubeDL(ydl_opts) as ydl:
+            ydl.extract_info(url, download=False)
+
+    except Exception as error:
+        print(f"Error listing formats: {str(error)}")
+
+
+def download_single_video(
+    url: str,
+    output_path: str,
+    thread_id: int = 0,
+    audio_only: bool = False,
+    max_resolution: Optional[int] = None
+) -> dict:
+    """
+    Download a single YouTube video, playlist, or channel.
+
+    Args:
+        url (str): YouTube URL to download
+        output_path (str): Directory to save the download
+        thread_id (int): Thread identifier for logging
+        audio_only (bool): If True, download audio only in MP3 format
+        max_resolution (int, optional):
+            Maximum video height
+            (e.g. 720, 1080, 1440, 2160)
+
+    Returns:
+        dict: Result status
+    """
+
+    if audio_only:
+        format_selector = 'bestaudio/best'
+        postprocessors = [{
+            'key': 'FFmpegExtractAudio',
+            'preferredcodec': 'mp3',
+            'preferredquality': '192',
+        }]
+
+        print(f"🎵 [Thread {thread_id}] Audio-only mode: Downloading MP3...")
+
+        archive_name = '.audio_download_archive'
+
+    else:
+        # Use separate video+audio streams for best quality
+        # Note: h264 (avc1) maxes at 1080p on YouTube;
+        # VP9/AV1 are used for 1440p/4K
+        if max_resolution:
+            # User specified a max resolution
+            format_selector = (
+                f'bestvideo[height<={max_resolution}]'
+                f'+bestaudio/'
+                f'best[height<={max_resolution}]'
+            )
+        else:
+            # No limit, get best available quality
+            format_selector = 'bestvideo+bestaudio/best'
+
+        postprocessors = []
+
+        archive_name = '.video_download_archive'
+
+    content_type, content_info = get_url_info(url)
+
+    # get_url_info falls back to an empty dict when extraction fails or
+    # returns nothing. The archive is still keyed on the video id, which
+    # the URL carries, so derive it rather than losing the skip.
+    archive_info = content_info
+
+    if content_type == 'video' and not (content_info or {}).get('id'):
+
+        fallback_id = extract_video_id(url)
+
+        if fallback_id:
+            archive_info = {'id': fallback_id, 'url': url}
+
+    downloader_options = {
+        'format': format_selector,
+
+        # For playlists/channels, skip unavailable entries (e.g. removed
+        # videos) instead of aborting the whole batch. Single videos still
+        # fail loudly since there's nothing else to continue past.
+        'ignoreerrors': 'only_download' if content_type in ('playlist', 'channel') else False,
+
+        'no_warnings': False,
+        'noplaylist': False,
+        'extract_flat': False,
+
+        'postprocessors': postprocessors,
+
+        'keepvideo': False,
+        'clean_infojson': True,
+
+        'retries': MAX_RETRIES,
+        'fragment_retries': MAX_RETRIES,
+
+        # Resume interrupted downloads
+        'continuedl': True,
+
+        # Keep .part files for resumable downloads
+        'part': True,
+
+        # Skip ONLY fully completed downloads
+        'download_archive': os.path.join(
+            output_path,
+            archive_name
+        ),
+
+        # Allow yt-dlp to fetch JS challenge solver scripts
+        # from GitHub. Without this, YouTube may only serve
+        # low-quality streams.
+        'remote_components': ['ejs:github'],
+    }
+
+    if not audio_only:
+        downloader_options['merge_output_format'] = 'mp4'
+
+    if content_type == 'playlist':
+        downloader_options['outtmpl'] = os.path.join(
+            output_path,
+            '%(playlist_title)s',
+            '%(playlist_index)03d-%(title)s [%(id)s].%(ext)s'
+        )
+
+        print(
+            f"📋 [Thread {thread_id}] "
+            f"Detected playlist URL. "
+            f"Downloading entire playlist..."
+        )
+
+        print(
+            f"📁 [Thread {thread_id}] "
+            f"Files will be saved to: "
+            f"{output_path}/[playlist_name]/"
+        )
+
+    elif content_type == 'channel':
+        downloader_options['outtmpl'] = os.path.join(
+            output_path,
+            '%(uploader)s',
+            '%(upload_date)s-%(title)s [%(id)s].%(ext)s'
+        )
+
+        print(
+            f"📺 [Thread {thread_id}] "
+            f"Detected channel URL. "
+            f"Downloading entire channel..."
+        )
+
+        print(
+            f"📁 [Thread {thread_id}] "
+            f"Files will be saved to: "
+            f"{output_path}/[channel_name]/"
+        )
+
+    else:
+        downloader_options['outtmpl'] = os.path.join(
+            output_path,
+            '%(title)s [%(id)s].%(ext)s'
+        )
+
+        print(
+            f"🎥 [Thread {thread_id}] "
+            f"Detected single video URL. "
+            f"Downloading {'audio' if audio_only else 'video'}..."
+        )
+
+        print(
+            f"📁 [Thread {thread_id}] "
+            f"File will be saved to: {output_path}/"
+        )
+
+    last_exception = None
+
+    for attempt in range(1, MAX_RETRIES + 1):
+
+        try:
+            with YoutubeDL(downloader_options) as ydl:
+
+                ydl.add_post_processor(
+                    FilenameLengthLimiter(thread_id=thread_id),
+                    when='pre_process'
+                )
+
+                # yt-dlp returns None when it recognizes a single video in
+                # the download archive. Treat that as an intentional skip,
+                # rather than retrying it as an extraction failure.
+                if (
+                    content_type == 'video' and
+                    archive_info and
+                    ydl.in_download_archive(archive_info)
+                ):
+                    title = archive_info.get(
+                        'title',
+                        archive_info.get('id')
+                    )
+
+                    return {
+                        'url': url,
+                        'success': True,
+                        'count': 0,
+                        'skipped': True,
+                        'message': (
+                            f"⏭️  [Thread {thread_id}] "
+                            f"Video '{title}' was already downloaded. "
+                            f"Skipping it because it is in the archive."
+                        )
+                    }
+
+                download_result = ydl.extract_info(
+                    url,
+                    download=True
+                )
+
+                if download_result is None:
+                    raise Exception(
+                        "Failed to extract downloadable content"
+                    )
+
+                if download_result.get('_type') == 'playlist':
+
+                    title = download_result.get(
+                        'title',
+                        'Unknown Playlist'
+                    )
+
+                    entries = download_result.get('entries', [])
+
+                    video_count = sum(
+                        1 for entry in entries
+                        if entry is not None
+                    )
+
+                    skipped_count = len(entries) - video_count
+
+                    if video_count == 0:
+
+                        # Nothing was downloaded. That is only a failure
+                        # if the archive isn't the reason the entries are
+                        # missing, since yt-dlp drops archived entries
+                        # from the result entirely.
+                        archived_count = count_archived_entries(url, ydl)
+
+                        if archived_count:
+
+                            # Every remaining entry, if any, was
+                            # unavailable rather than downloadable.
+                            unavailable_note = (
+                                f" ({skipped_count} unavailable)"
+                                if skipped_count
+                                else ""
+                            )
+
+                            return {
+                                'url': url,
+                                'success': True,
+                                'count': 0,
+                                'skipped': True,
+                                'message': (
+                                    f"⏭️  [Thread {thread_id}] "
+                                    f"{content_type.title()} '{title}' "
+                                    f"was already downloaded. Skipping "
+                                    f"{archived_count} archived "
+                                    f"{'entries' if archived_count != 1 else 'entry'}"
+                                    f"{unavailable_note}."
+                                )
+                            }
+
+                        raise Exception(
+                            "Playlist appears empty or unavailable"
+                        )
+
+                    print(
+                        f"📋 [Thread {thread_id}] "
+                        f"{content_type.title()}: "
+                        f"'{title}' ({video_count} videos"
+                        f"{f', {skipped_count} skipped' if skipped_count else ''})"
+                    )
+
+                    return {
+                        'url': url,
+                        'success': True,
+                        'count': video_count,
+                        'message': (
+                            f"✅ [Thread {thread_id}] "
+                            f"{content_type.title()} "
+                            f"'{title}' download completed! "
+                            f"({video_count} "
+                            f"{'MP3s' if audio_only else 'videos'}"
+                            f"{f', {skipped_count} unavailable/skipped' if skipped_count else ''}) "
+                            f"📂 Location: {output_path}"
+                        )
+                    }
+
+                else:
+
+                    title = download_result.get(
+                        'title',
+                        'Unknown'
+                    )
+
+                    return {
+                        'url': url,
+                        'success': True,
+                        'count': 1,
+                        'message': (
+                            f"✅ [Thread {thread_id}] "
+                            f"{'Audio' if audio_only else 'Video'} "
+                            f"'{title}' download completed! "
+                            f"📂 Location: {output_path}"
+                        )
+                    }
+
+        except Exception as error:
+
+            last_exception = error
+
+            if attempt < MAX_RETRIES:
+
+                retry_delay = (
+                    RETRY_DELAY * (2 ** (attempt - 1))
+                )
+
+                print(
+                    f"⚠️  [Thread {thread_id}] "
+                    f"Attempt {attempt}/{MAX_RETRIES} failed: "
+                    f"{str(error)[:200]}"
+                )
+
+                print(
+                    f"🔄 Retrying in {retry_delay}s..."
+                )
+
+                time.sleep(retry_delay)
+
+            else:
+
+                return {
+                    'url': url,
+                    'success': False,
+                    'count': 0,
+                    'message': (
+                        f"❌ [Thread {thread_id}] "
+                        f"Failed after {MAX_RETRIES} attempts. "
+                        f"Last error: {str(last_exception)}"
+                    )
+                }
+
+    return {
+        'url': url,
+        'success': False,
+        'count': 0,
+        'message': (
+            f"❌ [Thread {thread_id}] "
+            f"Unexpected error: {str(last_exception)}"
+        )
+    }
+
+
+def download_youtube_content(
+    urls: List[str],
+    output_path: Optional[str] = None,
+    list_formats: bool = False,
+    max_workers: int = DEFAULT_CONCURRENT_WORKERS,
+    audio_only: bool = False,
+    max_resolution: Optional[int] = None
+) -> None:
+    """
+    Download YouTube content (single videos, playlists, or channels)
+    in MP4 format or MP3 audio only.
+
+    Supports multiple URLs for simultaneous downloading.
+    """
+
+    if output_path is None:
+        output_path = os.path.join(os.getcwd(), 'downloads')
+
+    if list_formats:
+        print("Available formats for the first provided URL:")
+        get_available_formats(urls[0])
+        return
+
+    os.makedirs(output_path, exist_ok=True)
+
+    print(
+        f"\n🚀 Starting download of {len(urls)} URL(s) "
+        f"with {max_workers} concurrent "
+        f"{'worker' if max_workers == 1 else 'workers'}..."
+    )
+
+    print(f"📁 Output directory: {output_path}")
+
+    if audio_only:
+        print("🎧 Format: MP3 Audio Only")
+
+    elif max_resolution:
+        print(f"🎧 Format: MP4 Video (max {max_resolution}p)")
+
+    else:
+        print("🎧 Format: MP4 Video (best quality)")
+
+    playlist_count = sum(
+        1 for url in urls
+        if get_content_type(url) == 'playlist'
+    )
+
+    channel_count = sum(
+        1 for url in urls
+        if get_content_type(url) == 'channel'
+    )
+
+    video_count = len(urls) - playlist_count - channel_count
+
+    content_summary = []
+
+    if playlist_count > 0:
+        content_summary.append(f"{playlist_count} playlist(s)")
+
+    if channel_count > 0:
+        content_summary.append(f"{channel_count} channel(s)")
+
+    if video_count > 0:
+        content_summary.append(f"{video_count} video(s)")
+
+    if content_summary:
+        print(f"📋 Content: {' + '.join(content_summary)}")
+
+    else:
+        print("🎥 Content: Unknown content type")
+
+    print("-" * 60)
+
+    results = []
+
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+
+        future_to_url = {
+            executor.submit(
+                download_single_video,
+                url,
+                output_path,
+                i + 1,
+                audio_only,
+                max_resolution
+            ): url
+            for i, url in enumerate(urls)
+        }
+
+        for future in as_completed(future_to_url):
+
+            url = future_to_url[future]
+
+            try:
+                result = future.result()
+
+            except Exception as error:
+                # One URL failing unexpectedly must not discard the
+                # results of every other URL in the batch.
+                result = {
+                    'url': url,
+                    'success': False,
+                    'count': 0,
+                    'message': (
+                        f"❌ Unexpected error: {error}"
+                    )
+                }
+
+            results.append(result)
+
+            print(result['message'])
+
+    print("\n" + "=" * 60)
+    print("📊 DOWNLOAD SUMMARY")
+    print("=" * 60)
+
+    successful_downloads = [
+        r for r in results
+        if r['success']
+    ]
+
+    failed_downloads = [
+        r for r in results
+        if not r['success']
+    ]
+
+    skipped_downloads = [
+        r for r in successful_downloads
+        if r.get('skipped')
+    ]
+
+    total_successful_count = sum(
+        r.get('count', 1)
+        for r in successful_downloads
+    )
+
+    # A failed result carries no file count, so this is a URL count
+    total_failed_count = len(failed_downloads)
+
+    total_skipped_count = len(skipped_downloads)
+
+    print(
+        f"✅ Successful downloads: "
+        f"{total_successful_count} "
+        f"{'files' if total_successful_count != 1 else 'file'}"
+    )
+
+    print(
+        f"❌ Failed downloads: "
+        f"{total_failed_count} "
+        f"{'URLs' if total_failed_count != 1 else 'URL'}"
+    )
+
+    if total_skipped_count:
+        print(
+            f"⏭️  Already downloaded: "
+            f"{total_skipped_count} "
+            f"{'items' if total_skipped_count != 1 else 'item'} skipped"
+        )
+
+    if failed_downloads:
+
+        print("\n❌ Failed URLs:")
+
+        for result in failed_downloads:
+            print(f"   • {result['url']}")
+            print(f"     Reason: {result['message']}")
+
+    if total_successful_count and failed_downloads:
+        print(f"\n📂 Downloaded files saved to: {output_path}")
+
+    elif total_successful_count:
+        print(f"\n🎉 All files saved to: {output_path}")
+
+    elif skipped_downloads and not failed_downloads:
+        print("\n✅ No new downloads needed; all items were already downloaded.")
+
+
+if __name__ == "__main__":
+
+    if (
+        len(sys.argv) > 1 and
+        sys.argv[1] == '--list-formats'
+    ):
+
+        url = input(
+            "Enter the YouTube URL to list formats: "
+        )
+
+        download_youtube_content(
+            [url],
+            list_formats=True
+        )
+
+    else:
+
+        print("📥 YouTube Multi-Content Downloader")
+        print("=" * 60)
+
+        print("💡 SUPPORTED INPUT FORMATS:")
+        print("   🔸 Single URL: Just paste one YouTube URL")
+        print("   🔸 Comma-separated: url1, url2, url3")
+        print("   🔸 Space-separated: url1 url2 url3")
+        print("   🔸 Mixed format: url1, url2 url3, url4")
+        print("   🔸 Multi-line: Press Enter without typing, then one URL per line")
+
+        print()
+        print("🎯 SUPPORTED CONTENT TYPES:")
+        print("   📹 Single Videos: https://www.youtube.com/watch?v=K3SR37pIzVs")
+        print("   📋 Playlists: https://www.youtube.com/playlist?list=...")
+        print("   📺 Channels: https://www.youtube.com/@channelname")
+        print("   📺 Channels: https://www.youtube.com/channel/UC...")
+        print("   📺 Channels: https://www.youtube.com/c/channelname")
+        print("   📺 Channels: https://www.youtube.com/user/username")
+
+        print("-" * 60)
+
+        user_input = input("Enter YouTube URL(s): ")
+
+        # Multi-line mode
+        if not user_input.strip():
+
+            print("📝 Multi-line mode activated!")
+
+            print(
+                "💡 Enter one URL per line, "
+                "press Enter twice when finished:"
+            )
+
+            urls_list = []
+            line_count = 1
+
+            while True:
+
+                line = input(f"   URL {line_count}: ")
+
+                if line.strip() == "":
+                    break
+
+                urls_list.append(line)
+                line_count += 1
+
+            user_input = '\n'.join(urls_list)
+
+        if not user_input.strip():
+            print("❌ No URLs entered. Exiting...")
+            sys.exit(1)
+
+        urls = parse_multiple_urls(user_input)
+
+        if not urls:
+            print(
+                "❌ No valid YouTube URLs found. "
+                "Please try again."
+            )
+
+            sys.exit(1)
+
+        print(f"\n✅ Found {len(urls)} valid URL(s)")
+
+        for i, url in enumerate(urls, 1):
+            print(f"   {i}. {url}")
+
+        output_dir = input(
+            "\nEnter output directory "
+            "(press Enter for default): "
+        ).strip()
+
+        audio_only = True
+        max_resolution = None
+
+        print("🎵 Format: MP3 Audio only")
+
+        max_workers = 1
+
+        if len(urls) > 1:
+
+            workers_input = input(
+                f"Number of concurrent downloads "
+                f"(1-{MAX_CONCURRENT_WORKERS}, "
+                f"default={DEFAULT_CONCURRENT_WORKERS}): "
+            ).strip()
+
+            try:
+                max_workers = (
+                    int(workers_input)
+                    if workers_input
+                    else DEFAULT_CONCURRENT_WORKERS
+                )
+
+                max_workers = max(
+                    1,
+                    min(
+                        MAX_CONCURRENT_WORKERS,
+                        max_workers
+                    )
+                )
+
+            except ValueError:
+                max_workers = DEFAULT_CONCURRENT_WORKERS
+
+        print("\n🎬 Starting downloads...")
+        print(f"📊 URLs to download: {len(urls)}")
+
+        print("🎙️ Format: MP3 Audio")
+
+        if len(urls) > 1:
+            print(f"⚡ Concurrent workers: {max_workers}")
+
+        print(
+            f"📁 Output: "
+            f"{output_dir if output_dir else './downloads'}"
+        )
+
+        download_youtube_content(
+            urls,
+            output_dir or None,
+            max_workers=max_workers,
+            audio_only=audio_only,
+            max_resolution=max_resolution
+        )

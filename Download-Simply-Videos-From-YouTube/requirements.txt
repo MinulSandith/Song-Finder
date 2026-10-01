@@ -1,0 +1,7 @@
+yt-dlp>=2026.8.19
+ffmpeg-python>=0.2.0
+
+# Keep yt-dlp current. Older builds pick YouTube player clients whose
+# format URLs now return HTTP 403, so downloads fail outright rather
+# than degrading -- 2026.06.09 and 2026.07.04 are both affected.
+# Python 3.10+ is required for these releases.

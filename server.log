@@ -1,0 +1,1095 @@
+INFO:     Started server process [21048]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49443 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49444 - "GET /app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /style.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55214 - "GET /app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/logs?since=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55214 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55214 - "GET /api/logs?since=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55214 - "GET /api/logs?since=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55214 - "GET /api/logs?since=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55214 - "GET /api/logs?since=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55214 - "GET /api/logs?since=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55214 - "GET /api/logs?since=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55214 - "GET /api/logs?since=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55214 - "GET /api/logs?since=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55214 - "GET /api/logs?since=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55214 - "GET /api/logs?since=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55214 - "GET /api/logs?since=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55214 - "GET /api/logs?since=0 HTTP/1.1" 200 OK
+2026-10-01 17:51:14,646 google_genai.models INFO: AFC is enabled with max remote calls: 10.
+2026-10-01 17:51:14,646 google_genai.models WARNING: Direct use of automatic function calling (AFC) in Models.generate_content is not recommended. Instead, we recommend to use AFC in Chat.send_message. Similarly, direct use of AFC in Models.generate_content_stream is not recommended. Instead, we recommend to use AFC in Chat.send_message_stream.
+2026-10-01 17:51:20,281 httpx INFO: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-10-01 17:51:20,282 backend.ocr WARNING: OCR failed on model gemini-3.8-flash: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-10-01 17:51:20,282 google_genai.models INFO: AFC is enabled with max remote calls: 10.
+2026-10-01 17:51:26,241 httpx INFO: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.7-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-10-01 17:51:26,242 backend.ocr WARNING: OCR failed on model gemini-3.7-flash: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-10-01 17:51:26,242 google_genai.models INFO: AFC is enabled with max remote calls: 10.
+2026-10-01 17:51:29,585 httpx INFO: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-10-01 17:51:29,586 backend.ocr WARNING: OCR failed on model gemini-3.6-flash: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-10-01 17:51:29,586 google_genai.models INFO: AFC is enabled with max remote calls: 10.
+2026-10-01 17:52:30,820 httpx INFO: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-10-01 17:52:30,820 backend.ocr WARNING: OCR failed on model gemini-3.5-flash: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-10-01 17:52:30,820 google_genai.models INFO: AFC is enabled with max remote calls: 10.
+2026-10-01 17:52:33,401 httpx INFO: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-10-01 17:52:33,410 backend.ocr INFO: OCR raw response from gemini-3.5-flash-lite: '[\n  "ශ්\u200dරී පාදේ වන්දනා කරන්න",\n  "ගොයම් පිටි මගේ හදවත",\n  "දෙනෙතක සුදු අම්මාවරුන් වගේ",\n  "මුහුදු කැල යට කුඩල",\n  "මල්ලිගෙ නරක මිතුරන්",\n  "දුනු කඩයියා මලක් වගේ",\n  "බංචෙල්ලා නාට්ටල් කොයිදෝ",\n  "ගොයම් පිටි මගේ හදවත",\n  "මේ තරම් සිතුමුවද නැහුනේ",\n  "විදුරු බෝතලේ තුරවන්න",\n  "බංචෙල්ලා නාට්ටල් කොයිදෝ",\n  "කියන් ආයු ලේඛ",\n  "වත්තෙඩ ලෙහ",\n  "සිඳුකන පහන",\n  "අපි වෙන් වෙන කරව",\n  "පුර ජාය, හදට",\n  "නැපින් නුන ලෙය",\n  "මලට සුන්දරයි"\n]'
+INFO:     127.0.0.1:55214 - "POST /api/ocr HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56967 - "GET /api/logs?since=0 HTTP/1.1" 200 OK
+2026-10-01 17:52:37,764 google_genai.models INFO: AFC is enabled with max remote calls: 10.
+2026-10-01 17:52:43,274 httpx INFO: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-10-01 17:52:43,274 backend.ocr WARNING: Verify failed on model gemini-3.8-flash: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-10-01 17:52:43,274 google_genai.models INFO: AFC is enabled with max remote calls: 10.
+2026-10-01 17:52:50,179 httpx INFO: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.7-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-10-01 17:52:50,179 backend.ocr WARNING: Verify failed on model gemini-3.7-flash: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-10-01 17:52:50,179 google_genai.models INFO: AFC is enabled with max remote calls: 10.
+2026-10-01 17:53:00,274 httpx INFO: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-10-01 17:53:00,275 backend.ocr WARNING: Verify failed on model gemini-3.6-flash: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-10-01 17:53:00,275 google_genai.models INFO: AFC is enabled with max remote calls: 10.
+2026-10-01 17:53:13,909 httpx INFO: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-10-01 17:53:13,910 backend.ocr WARNING: Verify failed on model gemini-3.5-flash: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-10-01 17:53:13,910 google_genai.models INFO: AFC is enabled with max remote calls: 10.
+2026-10-01 17:53:17,779 httpx INFO: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+2026-10-01 17:53:17,781 backend.ocr INFO: Verify raw response from gemini-3.5-flash-lite: '[\n  {\n    "scanned": "ශ්\u200dරී පාදේ වන්දනා කරන්න",\n    "title": "සිරීපාදේ වන්දවන්න",\n    "artist": "මිදෝරි කරුණාරත්න",\n    "status": "corrected",\n    "note": "Corrected to the actual song title from search results."\n  },\n  {\n    "scanned": "ගොයම් පිටි මගේ හදවත",\n    "title": "ගොයම් පිපී මගේ හදවත",\n    "artist": "",\n    "status": "unverified",\n    "note": "Scanned text seems to be a misreading of a song title, but no exact match found."\n  },\n  {\n    "scanned": "දෙනෙතක සුදු අම්මාවරුන් වගේ",\n    "title": "දෙනෙතක සුදු අම්මාවරුන් වගේ",\n    "artist": "",\n    "status": "unverified",\n    "note": "No matching song found."\n  },\n  {\n    "scanned": "මුහුදු කැල යට කුඩල",\n    "title": "මුහුදු කැල යට කුඩල",\n    "artist": "",\n    "status": "unverified",\n    "note": "No matching song found."\n  },\n  {\n    "scanned": "මල්ලිගෙ නරක මිතුරන්",\n    "title": "මල්ලියේ නරක මිතුරන්",\n    "artist": "සුනිල් එදිරිසිංහ",\n    "status": "corrected",\n    "note": "Fixed spelling to match the well-known Sunil Edirisinghe son'
+INFO:     127.0.0.1:56967 - "POST /api/verify HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55214 - "GET /api/logs?since=7 HTTP/1.1" 200 OK
+2026-10-01 17:53:17,840 google_genai.models INFO: AFC is enabled with max remote calls: 10.
+2026-10-01 17:53:18,242 httpx INFO: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-10-01 17:53:18,243 backend.ocr WARNING: Original singer failed on model gemini-3.8-flash: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash\nPlease retry in 42.344909011s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.8-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '42s'}]}}
+2026-10-01 17:53:18,243 google_genai.models INFO: AFC is enabled with max remote calls: 10.
+INFO:     127.0.0.1:56201 - "GET /api/search?q=%E0%B7%81%E0%B7%8A%E2%80%8D%E0%B6%BB%E0%B7%93+%E0%B6%B4%E0%B7%8F%E0%B6%AF%E0%B7%9A+%E0%B7%80%E0%B6%B1%E0%B7%8A%E0%B6%AF%E0%B6%B1%E0%B7%8F+%E0%B6%9A%E0%B6%BB%E0%B6%B1%E0%B7%8A%E0%B6%B1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56201 - "GET /api/logs?since=14 HTTP/1.1" 200 OK
+2026-10-01 17:53:22,693 httpx INFO: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.7-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-10-01 17:53:22,694 backend.ocr WARNING: Original singer failed on model gemini-3.7-flash: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-10-01 17:53:22,694 google_genai.models INFO: AFC is enabled with max remote calls: 10.
+INFO:     127.0.0.1:56201 - "GET /api/logs?since=17 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56201 - "GET /api/logs?since=18 HTTP/1.1" 200 OK
+2026-10-01 17:53:27,636 httpx INFO: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-10-01 17:53:27,637 backend.ocr WARNING: Original singer failed on model gemini-3.6-flash: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-10-01 17:53:27,637 google_genai.models INFO: AFC is enabled with max remote calls: 10.
+INFO:     127.0.0.1:56201 - "GET /api/logs?since=18 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56201 - "GET /api/logs?since=19 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56201 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56201 - "GET /api/logs?since=19 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56201 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56201 - "GET /api/logs?since=19 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56201 - "GET /api/logs?since=19 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56201 - "GET /api/logs?since=19 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56201 - "GET /api/logs?since=19 HTTP/1.1" 200 OK
+2026-10-01 17:53:50,601 httpx INFO: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-01 17:53:50,617 backend.ocr INFO: Original singer raw response from gemini-3.5-flash: '[\n  {\n    "title": "සිරීපාදේ වන්දවන්න",\n    "singer": "වික්ටර් සිල්වා",\n    "aliases": [\n      "Victor Silva",\n      "Wiktor Silva"\n    ],\n    "confidence": "medium",\n    "note": "Original artist is veteran singer Victor Silva; Midori Karunaratne later performed a popular cover of this song."\n  },\n  {\n    "title": "මල්ලියේ නරක මිතුරන්",\n    "singer": "සුනිල් එදිරිසිංහ",\n    "aliases": [\n      "Sunil Edirisinghe",\n      "Sunil Edirisingha",\n      "Sunil Edirisinha"\n    ],\n    "confidence": "high",\n    "note": "Original classic release by Sunil Edirisinghe from his early career."\n  },\n  {\n    "title": "මං නුඹෙමද",\n    "singer": "සුපුන් පෙරේරා",\n    "aliases": [\n      "Supun Perera",\n      "Supun"\n    ],\n    "confidence": "high",\n    "note": "Original release by contemporary artist Supun Perera."\n  },\n  {\n    "title": "අපි වෙන්වෙන තරමට",\n    "singer": "චමික සිරිමාන්න",\n    "aliases": [\n      "Chamika Sirimanna",\n      "Chamika"\n    ],\n    "confidence": "high",\n    "note": "Original releas'
+INFO:     127.0.0.1:55214 - "POST /api/originals HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60526 - "GET /api/logs?since=19 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56201 - "GET /api/search?q=%E0%B6%9C%E0%B7%9C%E0%B6%BA%E0%B6%B8%E0%B7%8A+%E0%B6%B4%E0%B7%92%E0%B6%B4%E0%B7%93+%E0%B6%B8%E0%B6%9C%E0%B7%9A+%E0%B7%84%E0%B6%AF%E0%B7%80%E0%B6%AD HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55214 - "GET /api/search?q=%E0%B7%83%E0%B7%92%E0%B6%BB%E0%B7%93%E0%B6%B4%E0%B7%8F%E0%B6%AF%E0%B7%9A+%E0%B7%80%E0%B6%B1%E0%B7%8A%E0%B6%AF%E0%B7%80%E0%B6%B1%E0%B7%8A%E0%B6%B1&singer=%E0%B7%80%E0%B7%92%E0%B6%9A%E0%B7%8A%E0%B6%A7%E0%B6%BB%E0%B7%8A+%E0%B7%83%E0%B7%92%E0%B6%BD%E0%B7%8A%E0%B7%80%E0%B7%8F&singer=Victor+Silva&singer=Wiktor+Silva HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=21 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=23 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=23 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=23 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61095 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/search?q=%E0%B6%9C%E0%B7%9C%E0%B6%BA%E0%B6%B8%E0%B7%8A+%E0%B6%B4%E0%B7%92%E0%B6%B4%E0%B7%93+%E0%B6%B8%E0%B6%9C%E0%B7%9A+%E0%B7%84%E0%B6%AF%E0%B7%80%E0%B6%AD HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=23 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=25 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53330 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/search?q=%E0%B6%AF%E0%B7%99%E0%B6%B1%E0%B7%99%E0%B6%AD%E0%B6%9A+%E0%B7%83%E0%B7%94%E0%B6%AF%E0%B7%94+%E0%B6%85%E0%B6%B8%E0%B7%8A%E0%B6%B8%E0%B7%8F%E0%B7%80%E0%B6%BB%E0%B7%94%E0%B6%B1%E0%B7%8A+%E0%B7%80%E0%B6%9C%E0%B7%9A HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=25 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=27 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=27 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=27 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=27 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=27 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=27 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=27 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=27 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=27 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=27 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=27 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=27 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=27 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=27 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=27 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/search?q=senehasa+pidu+ammawarun+wage HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=27 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58114 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/search?q=%E0%B6%B8%E0%B7%94%E0%B7%84%E0%B7%94%E0%B6%AF%E0%B7%94+%E0%B6%9A%E0%B7%90%E0%B6%BD+%E0%B6%BA%E0%B6%A7+%E0%B6%9A%E0%B7%94%E0%B6%A9%E0%B6%BD HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=28 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=30 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=30 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=30 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=30 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=30 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=30 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=30 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/search?q=%E0%B6%B8%E0%B7%94%E0%B7%84%E0%B7%94%E0%B6%AF%E0%B7%94+pathula+%E0%B6%BA%E0%B6%A7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=30 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51109 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51109 - "GET /api/logs?since=31 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51109 - "GET /api/logs?since=32 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51109 - "GET /api/logs?since=32 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/search?q=%E0%B6%B8%E0%B6%BD%E0%B7%8A%E0%B6%BD%E0%B7%92%E0%B6%BA%E0%B7%9A+%E0%B6%B1%E0%B6%BB%E0%B6%9A+%E0%B6%B8%E0%B7%92%E0%B6%AD%E0%B7%94%E0%B6%BB%E0%B6%B1%E0%B7%8A&singer=%E0%B7%83%E0%B7%94%E0%B6%B1%E0%B7%92%E0%B6%BD%E0%B7%8A+%E0%B6%91%E0%B6%AF%E0%B7%92%E0%B6%BB%E0%B7%92%E0%B7%83%E0%B7%92%E0%B6%82%E0%B7%84&singer=Sunil+Edirisinghe&singer=Sunil+Edirisingha&singer=Sunil+Edirisinha HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=32 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51109 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/search?q=%E0%B6%AF%E0%B7%94%E0%B6%B1%E0%B7%94+%E0%B6%9A%E0%B6%A9%E0%B6%BA%E0%B7%92%E0%B6%BA%E0%B7%8F+%E0%B6%B8%E0%B6%BD%E0%B6%9A%E0%B7%8A+%E0%B7%80%E0%B6%9C%E0%B7%9A HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=33 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=35 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=35 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=35 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=35 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=35 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=35 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=35 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/search?q=%E0%B6%AF%E0%B7%94%E0%B6%B1%E0%B7%94+keyyya+%E0%B6%B8%E0%B6%BD%E0%B6%9A%E0%B7%8A+%E0%B7%80%E0%B6%9C%E0%B7%9A HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61448 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61448 - "GET /api/logs?since=35 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/search?q=%E0%B6%B6%E0%B6%82%E0%B6%A0%E0%B7%99%E0%B6%BD%E0%B7%8A%E0%B6%BD%E0%B7%8F+%E0%B6%B1%E0%B7%8F%E0%B6%A7%E0%B7%8A%E0%B6%A7%E0%B6%BD%E0%B7%8A+%E0%B6%9A%E0%B7%9C%E0%B6%BA%E0%B7%92%E0%B6%AF%E0%B7%9D HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=37 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=38 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=38 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=38 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=38 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=38 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=38 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/search?q=onchilla+thotili+%E0%B6%9A%E0%B7%9C%E0%B6%BA%E0%B7%92%E0%B6%AF%E0%B7%9D HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=38 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62124 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/search?q=%E0%B6%9C%E0%B7%9C%E0%B6%BA%E0%B6%B8%E0%B7%8A+%E0%B6%B4%E0%B7%92%E0%B6%B4%E0%B7%93+%E0%B6%B8%E0%B6%9C%E0%B7%9A+%E0%B7%84%E0%B6%AF%E0%B7%80%E0%B6%AD HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=39 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=41 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60119 - "GET /api/logs?since=41 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/search?q=%E0%B6%B8%E0%B6%82+%E0%B6%B1%E0%B7%94%E0%B6%B9%E0%B7%99%E0%B6%B8%E0%B6%AF&singer=%E0%B7%83%E0%B7%94%E0%B6%B4%E0%B7%94%E0%B6%B1%E0%B7%8A+%E0%B6%B4%E0%B7%99%E0%B6%BB%E0%B7%9A%E0%B6%BB%E0%B7%8F&singer=Supun+Perera&singer=Supun HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=41 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60119 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/search?q=%E0%B7%80%E0%B7%92%E0%B6%AF%E0%B7%94%E0%B6%BB%E0%B7%94+%E0%B6%B6%E0%B7%9D%E0%B6%AD%E0%B6%BD%E0%B7%9A+%E0%B6%AD%E0%B7%94%E0%B6%BB%E0%B7%80%E0%B6%B1%E0%B7%8A%E0%B6%B1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=42 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=44 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=44 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=44 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=44 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/search?q=%E0%B6%B6%E0%B6%82%E0%B6%A0%E0%B7%99%E0%B6%BD%E0%B7%8A%E0%B6%BD%E0%B7%8F+%E0%B6%B1%E0%B7%8F%E0%B6%A7%E0%B7%8A%E0%B6%A7%E0%B6%BD%E0%B7%8A+%E0%B6%9A%E0%B7%9C%E0%B6%BA%E0%B7%92%E0%B6%AF%E0%B7%9D HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=44 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60167 - "GET /api/logs?since=45 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/search?q=%E0%B6%9A%E0%B7%92%E0%B6%BA%E0%B6%B1%E0%B7%8A+%E0%B6%86%E0%B6%BA%E0%B7%94+%E0%B6%BD%E0%B7%9A%E0%B6%9B HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=45 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=46 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=46 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=46 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=46 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/search?q=%E0%B6%9A%E0%B7%92%E0%B6%BA%E0%B6%B1%E0%B7%8A+%E0%B6%86%E0%B6%BA%E0%B7%94+%E0%B6%BD%E0%B7%9A%E0%B6%9B HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=46 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=47 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/search?q=siyak+%E0%B6%86%E0%B6%BA%E0%B7%94+%E0%B6%BD%E0%B7%9A%E0%B6%9B HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=47 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=48 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=48 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53606 - "GET /api/logs?since=48 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/search?q=siyak+%E0%B6%86%E0%B6%BA%E0%B7%94 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53606 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/search?q=%E0%B7%80%E0%B6%AD%E0%B7%8A%E0%B6%AD%E0%B7%99%E0%B6%A9+%E0%B6%BD%E0%B7%99%E0%B7%84 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=48 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=51 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=51 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=51 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=51 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=51 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=51 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=51 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=51 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/search?q=wakkada+laga HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50856 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50856 - "GET /api/logs?since=51 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/search?q=%E0%B7%83%E0%B7%92%E0%B6%B3%E0%B7%94%E0%B6%9A%E0%B6%B1+%E0%B6%B4%E0%B7%84%E0%B6%B1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=53 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=54 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=54 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=54 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=54 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/search?q=sadakada++%E0%B6%B4%E0%B7%84%E0%B6%B1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=54 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63076 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/search?q=%E0%B6%85%E0%B6%B4%E0%B7%92+%E0%B7%80%E0%B7%99%E0%B6%B1%E0%B7%8A%E0%B7%80%E0%B7%99%E0%B6%B1+%E0%B6%AD%E0%B6%BB%E0%B6%B8%E0%B6%A7&singer=%E0%B6%A0%E0%B6%B8%E0%B7%92%E0%B6%9A+%E0%B7%83%E0%B7%92%E0%B6%BB%E0%B7%92%E0%B6%B8%E0%B7%8F%E0%B6%B1%E0%B7%8A%E0%B6%B1&singer=Chamika+Sirimanna&singer=Chamika HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=55 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=57 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=57 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62203 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62203 - "GET /api/logs?since=57 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/search?q=%E0%B6%BB%E0%B7%91+%E0%B6%A0%E0%B7%8F%E0%B6%BA%E0%B7%8F&singer=%E0%B6%BB%E0%B7%96%E0%B6%9A%E0%B7%8F%E0%B6%B1%E0%B7%8A%E0%B6%AD+%E0%B6%9C%E0%B7%94%E0%B6%AB%E0%B6%AD%E0%B7%92%E0%B6%BD%E0%B6%9A&singer=Rookantha+Goonatillake&singer=Rookantha+Gunathilake&singer=Rookantha HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62203 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62203 - "GET /api/logs?since=58 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/search?q=%E0%B6%B1%E0%B7%90%E0%B6%B4%E0%B7%92%E0%B6%B1%E0%B7%8A+%E0%B6%B1%E0%B7%94%E0%B6%B1+%E0%B6%BD%E0%B7%99%E0%B6%BA HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=60 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=61 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=61 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=61 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=61 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=61 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63211 - "GET /api/logs?since=61 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/search?q=dewani+budun+lesa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63211 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/search?q=%E0%B6%B8%E0%B6%BD%E0%B6%A7+%E0%B7%83%E0%B7%94%E0%B7%80%E0%B6%B3+%E0%B7%83%E0%B7%9A&singer=%E0%B7%83%E0%B7%94%E0%B6%B1%E0%B7%92%E0%B6%BD%E0%B7%8A+%E0%B6%91%E0%B6%AF%E0%B7%92%E0%B6%BB%E0%B7%92%E0%B7%83%E0%B7%92%E0%B6%82%E0%B7%84&singer=Sunil+Edirisinghe&singer=Sunil+Edirisingha&singer=Sunil+Edirisinha HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=61 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=64 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=64 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=64 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=65 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=65 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=65 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=65 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=65 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=65 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=65 HTTP/1.1" 200 OK
+2026-10-01 17:59:39,169 google_genai.models INFO: AFC is enabled with max remote calls: 10.
+2026-10-01 17:59:39,898 httpx INFO: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-10-01 17:59:39,899 backend.ocr WARNING: Verify failed on model gemini-3.8-flash: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash\nPlease retry in 20.688949647s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.8-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '20s'}]}}
+2026-10-01 17:59:39,899 google_genai.models INFO: AFC is enabled with max remote calls: 10.
+2026-10-01 17:59:43,539 httpx INFO: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.7-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-10-01 17:59:43,539 backend.ocr WARNING: Verify failed on model gemini-3.7-flash: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-10-01 17:59:43,540 google_genai.models INFO: AFC is enabled with max remote calls: 10.
+2026-10-01 18:00:07,396 httpx INFO: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-01 18:00:07,410 backend.ocr INFO: Verify raw response from gemini-3.6-flash: '[\n  {\n    "scanned": "ශ්\u200dරී පාදේ වන්දනා කරන්න",\n    "title": "සිරිපාදේ වන්දවන්න",\n    "artist": "මිදෝරි කරුණාරත්න",\n    "status": "corrected",\n    "note": "Corrected based on handwriting line 1 \'සිරීපාදේ වන්දවන්න\'."\n  },\n  {\n    "scanned": "ගොයම් පිටි මගේ හදවත",\n    "title": "සොයන් එමි මගේ හදවත",\n    "artist": "එච්. ආර්. ජෝතිපාල",\n    "status": "corrected",\n    "note": "Misread OCR of handwritten line 2 \'සොයන් එමි මගේ හදවත\'."\n  },\n  {\n    "scanned": "මල්ලිගෙ නරක මිතුරන්",\n    "title": "මල්ලියෙ නරක මිතුරන්",\n    "artist": "සුනිල් එදිරිසිංහ",\n    "status": "corrected",\n    "note": "Corrected spelling of \'මල්ලිගෙ\' to \'මල්ලියෙ\'."\n  },\n  {\n    "scanned": "ගොයම් පිටි මගේ හදවත",\n    "title": "සොයන් එමි මගේ හදවත",\n    "artist": "එච්. ආර්. ජෝතිපාල",\n    "status": "corrected",\n    "note": "Corrected misread OCR of repeated handwritten line 8 \'සොයන් එමි මගේ හදවත\'."\n  },\n  {\n    "scanned": "මේ තරම් සිතුමුවද නැහුනේ",\n    "title": "මේ තරම් සියුමැලිද කළුගල්",\n    "artist": "සුනිල් එදිරිසිංහ",\n    "st'
+INFO:     127.0.0.1:51203 - "POST /api/verify HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=65 HTTP/1.1" 200 OK
+2026-10-01 18:00:07,430 google_genai.models INFO: AFC is enabled with max remote calls: 10.
+2026-10-01 18:00:07,820 httpx INFO: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-10-01 18:00:07,820 backend.ocr WARNING: Original singer failed on model gemini-3.8-flash: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash\nPlease retry in 52.769869684s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-3.8-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '52s'}]}}
+2026-10-01 18:00:07,820 google_genai.models INFO: AFC is enabled with max remote calls: 10.
+2026-10-01 18:00:09,395 httpx INFO: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.7-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-10-01 18:00:09,396 backend.ocr WARNING: Original singer failed on model gemini-3.7-flash: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-10-01 18:00:09,396 google_genai.models INFO: AFC is enabled with max remote calls: 10.
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=70 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=73 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=73 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=73 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51203 - "GET /api/logs?since=73 HTTP/1.1" 200 OK
+2026-10-01 18:00:25,417 httpx INFO: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-01 18:00:25,427 backend.ocr INFO: Original singer raw response from gemini-3.6-flash: '[\n  {\n    "title": "සිරිපාදේ වන්දවන්න",\n    "singer": "මිදෝරි කරුණාරත්න",\n    "aliases": [\n      "Midori Karunaratne",\n      "Midori Karunarathna",\n      "Midori Karunaratna"\n    ],\n    "confidence": "high",\n    "note": "Original 1970s song recorded as a child artist."\n  },\n  {\n    "title": "සොයන් එමි මගේ හදවත",\n    "singer": "එච්. ආර්. ජෝතිපාල",\n    "aliases": [\n      "H.R. Jothipala",\n      "HR Jothipala",\n      "H R Jothipala",\n      "Jothipala"\n    ],\n    "confidence": "high",\n    "note": "Original classic recording by H. R. Jothipala."\n  },\n  {\n    "title": "මල්ලියෙ නරක මිතුරන්",\n    "singer": "සුනිල් එදිරිසිංහ",\n    "aliases": [\n      "Sunil Edirisinghe",\n      "Sunil Edirisingha",\n      "Sunil Edirisinha"\n    ],\n    "confidence": "high",\n    "note": "Original release by Sunil Edirisinghe."\n  },\n  {\n    "title": "සොයන් එමි මගේ හදවත",\n    "singer": "එච්. ආර්. ජෝතිපාල",\n    "aliases": [\n      "H.R. Jothipala",\n      "HR Jothipala",\n      "H R Jothipala",\n      "Jothipala"\n    ],\n  '
+INFO:     127.0.0.1:51648 - "POST /api/originals HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=73 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=75 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=75 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=75 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=75 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=75 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=75 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=75 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=75 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=75 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=75 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=75 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=75 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=75 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=75 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=75 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=75 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=75 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+2026-10-01 18:01:27,059 google_genai.models INFO: AFC is enabled with max remote calls: 10.
+2026-10-01 18:01:27,660 httpx INFO: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-10-01 18:01:27,661 backend.ocr WARNING: More songs failed on model gemini-3.8-flash: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash\nPlease retry in 32.937352365s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.8-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '32s'}]}}
+2026-10-01 18:01:27,661 google_genai.models INFO: AFC is enabled with max remote calls: 10.
+INFO:     127.0.0.1:59514 - "GET /api/logs?since=75 HTTP/1.1" 200 OK
+2026-10-01 18:01:29,539 httpx INFO: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.7-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-10-01 18:01:29,540 backend.ocr WARNING: More songs failed on model gemini-3.7-flash: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-10-01 18:01:29,540 google_genai.models INFO: AFC is enabled with max remote calls: 10.
+2026-10-01 18:01:31,039 httpx INFO: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-10-01 18:01:31,040 backend.ocr WARNING: More songs failed on model gemini-3.6-flash: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-10-01 18:01:31,040 google_genai.models INFO: AFC is enabled with max remote calls: 10.
+INFO:     127.0.0.1:59514 - "GET /api/logs?since=77 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59514 - "GET /api/logs?since=79 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59514 - "GET /api/logs?since=79 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59514 - "GET /api/logs?since=79 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59514 - "GET /api/logs?since=79 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59514 - "GET /api/logs?since=79 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59514 - "GET /api/logs?since=79 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59514 - "GET /api/logs?since=79 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59514 - "GET /api/logs?since=79 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59514 - "GET /api/logs?since=79 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59514 - "GET /api/logs?since=79 HTTP/1.1" 200 OK
+2026-10-01 18:02:02,715 httpx INFO: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-01 18:02:02,742 backend.ocr INFO: More songs raw response from gemini-3.5-flash: '[\n  {\n    "singer": "මිදෝරි කරුණාරත්න (Midori Karunaratne, Midori Karunarathna, Midori Karunaratna)",\n    "songs": [\n      {"title": "රෑ අහස", "title_en": "Rae Ahasa"},\n      {"title": "කඳුළු", "title_en": "Kandulu"},\n      {"title": "කවුරුන්දෝ", "title_en": "Kavurundo"},\n      {"title": "නාඩන් වස්තුවේ", "title_en": "Nadan Wasthuwe"},\n      {"title": "හිම හංසියේ", "title_en": "Hima Hansiye"},\n      {"title": "නිලංකාර", "title_en": "Nilankara"},\n      {"title": "ආදරේ කියන්නේ", "title_en": "Adare Kiyanne"},\n      {"title": "මං ආසම හීනෙට", "title_en": "Man Asama Heeneta"}\n    ]\n  },\n  {\n    "singer": "එච්. ආර්. ජෝතිපාල (H.R. Jothipala, HR Jothipala, H R Jothipala)",\n    "songs": [\n      {"title": "පාට පොදක් තිලක ලා", "title_en": "Pata Podak Thilaka La"},\n      {"title": "ඔබ දකින දකින වාරයේ", "title_en": "Oba Dakina Dakina Waraye"},\n      {"title": "ඔබ නිදන්න ඔබ නිදන්න", "title_en": "Oba Nidanna Oba Nidanna"},\n      {"title": "මීදුම් ගලනා කඳු වැටියේ", "title_en": "Meedum Galana Kandu Watiy'
+INFO:     127.0.0.1:59514 - "GET /api/logs?since=79 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59514 - "GET /api/logs?since=81 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59514 - "GET /api/logs?since=81 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59514 - "GET /api/logs?since=81 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59514 - "GET /api/logs?since=82 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59514 - "GET /api/logs?since=83 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59514 - "GET /api/logs?since=83 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59514 - "GET /api/logs?since=84 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59514 - "GET /api/logs?since=84 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59514 - "GET /api/logs?since=85 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59514 - "GET /api/logs?since=85 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59514 - "GET /api/logs?since=86 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59514 - "GET /api/logs?since=86 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59514 - "GET /api/logs?since=86 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59514 - "GET /api/logs?since=87 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59514 - "GET /api/logs?since=88 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/more-songs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=88 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=89 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=89 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=89 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=89 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=89 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=89 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=89 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=89 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=89 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=89 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=89 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=89 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=89 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=89 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63197 - "GET /api/logs?since=91 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63197 - "GET /api/logs?since=94 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=96 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=98 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=99 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=101 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=103 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=106 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=109 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=111 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=115 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=117 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=119 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=119 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=119 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=119 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=119 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=119 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=119 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=119 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=119 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=119 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=119 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=119 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=119 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=119 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=119 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=119 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=119 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /style.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58301 - "GET /app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58301 - "GET /api/logs?since=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=119 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=119 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=119 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=119 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=119 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=119 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=119 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=119 HTTP/1.1" 200 OK
+2026-10-01 18:05:40,682 google_genai.models INFO: AFC is enabled with max remote calls: 10.
+2026-10-01 18:05:41,487 httpx INFO: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-10-01 18:05:41,488 backend.ocr WARNING: OCR failed on model gemini-3.8-flash: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash\nPlease retry in 19.109233079s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.8-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '19s'}]}}
+2026-10-01 18:05:41,488 google_genai.models INFO: AFC is enabled with max remote calls: 10.
+2026-10-01 18:05:43,946 httpx INFO: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.7-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-10-01 18:05:43,947 backend.ocr WARNING: OCR failed on model gemini-3.7-flash: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-10-01 18:05:43,947 google_genai.models INFO: AFC is enabled with max remote calls: 10.
+2026-10-01 18:05:46,437 httpx INFO: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-10-01 18:05:46,438 backend.ocr WARNING: OCR failed on model gemini-3.6-flash: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-10-01 18:05:46,438 google_genai.models INFO: AFC is enabled with max remote calls: 10.
+2026-10-01 18:06:06,627 httpx INFO: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-01 18:06:06,643 backend.ocr INFO: OCR raw response from gemini-3.5-flash: '[\n  "ඇයව අමතක කරන්න",\n  "ආදරය උතුරා ලා",\n  "අඳුරට ඉඩ දී",\n  "එදා රෑ",\n  "සඳ තරුමල්",\n  "මේ අයුරින් අපි",\n  "නුවර ඉන්න",\n  "වර්තමානෙත්",\n  "හැම බාධකත්",\n  "සඳුන් කැලෙන්",\n  "රන් කෙඳෙන්",\n  "වියන් ආදරය",\n  "කුරුළු පාලොවේ ඈ",\n  "මල් සරත් මල් සැඳෑ",\n  "නිල් නිල් දෑසේ දේදුන්න",\n  "ලොවෙන් විසිතුරු",\n  "මේ නගරය අභියස",\n  "රතු නෙළුම් පීදිලා",\n  "කවදා හමුවේද",\n  "හේන් කුරහන් පැලේ",\n  "දෙසිතක සෙනෙහස",\n  "බෝවිටියා දන් වැලේ"\n]'
+INFO:     127.0.0.1:51648 - "POST /api/ocr HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51691 - "GET /api/logs?since=119 HTTP/1.1" 200 OK
+2026-10-01 18:06:13,333 google_genai.models INFO: AFC is enabled with max remote calls: 10.
+2026-10-01 18:06:13,822 httpx INFO: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-10-01 18:06:13,822 backend.ocr WARNING: Verify failed on model gemini-3.8-flash: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash\nPlease retry in 46.775510019s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-3.8-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '46s'}]}}
+2026-10-01 18:06:13,822 google_genai.models INFO: AFC is enabled with max remote calls: 10.
+2026-10-01 18:10:30,559 httpx INFO: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.7-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-10-01 18:10:30,559 backend.ocr WARNING: Verify failed on model gemini-3.7-flash: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-10-01 18:10:30,559 google_genai.models INFO: AFC is enabled with max remote calls: 10.
+2026-10-01 18:10:33,774 httpx INFO: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-10-01 18:10:33,775 backend.ocr WARNING: Verify failed on model gemini-3.6-flash: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-10-01 18:10:33,775 google_genai.models INFO: AFC is enabled with max remote calls: 10.
+2026-10-01 18:11:49,059 httpx INFO: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-01 18:11:49,100 backend.ocr INFO: Verify raw response from gemini-3.5-flash: '[\n  {\n    "scanned": "ඇයව අමතක කරන්න",\n    "title": "ඇයව අමතක කරන්න",\n    "artist": "සශිකා නිසංසලා",\n    "status": "verified",\n    "note": "Real Sinhala song"\n  },\n  {\n    "scanned": "ආදරය උතුරා ලා",\n    "title": "ආදරයේ උල්පත වූ අම්මා",\n    "artist": "වික්ටර් රත්නායක",\n    "status": "corrected",\n    "note": "OCR misread \'ආදරයේ උල්පත වූ අම්මා\' as \'ආදරය උතුරා ලා\'"\n  },\n  {\n    "scanned": "අඳුරට ඉඩ දී",\n    "title": "අඳුරට ඉඩ දී",\n    "artist": "රූකාන්ත ගුණතිලක",\n    "status": "verified",\n    "note": "Real Sinhala song"\n  },\n  {\n    "scanned": "එදා රෑ",\n    "title": "එදා රෑ",\n    "artist": "මිල්ටන් මල්ලවආරච්චි",\n    "status": "verified",\n    "note": "Real Sinhala song"\n  },\n  {\n    "scanned": "සඳ තරුමල්",\n    "title": "සඳ තරු මල්",\n    "artist": "අතුල සහ සමිතා",\n    "status": "corrected",\n    "note": "Minor spacing adjustment"\n  },\n  {\n    "scanned": "මේ අයුරින් අපි",\n    "title": "මේ අයුරින් අපි",\n    "artist": "ටී.එම්. ජයරත්න",\n    "status": "verified",\n    "note": "Real Sinhala song"\n '
+INFO:     127.0.0.1:51691 - "POST /api/verify HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=125 HTTP/1.1" 200 OK
+2026-10-01 18:11:49,120 google_genai.models INFO: AFC is enabled with max remote calls: 10.
+2026-10-01 18:11:49,776 httpx INFO: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-10-01 18:11:49,777 backend.ocr WARNING: Original singer failed on model gemini-3.8-flash: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash\nPlease retry in 10.836371017s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.8-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '10s'}]}}
+2026-10-01 18:11:49,777 google_genai.models INFO: AFC is enabled with max remote calls: 10.
+2026-10-01 18:11:50,511 httpx INFO: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.7-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-10-01 18:11:50,512 backend.ocr WARNING: Original singer failed on model gemini-3.7-flash: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.7-flash\nPlease retry in 10.101026582s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.7-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '10s'}]}}
+2026-10-01 18:11:50,512 google_genai.models INFO: AFC is enabled with max remote calls: 10.
+INFO:     127.0.0.1:51691 - "GET /api/logs?since=131 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51691 - "GET /api/logs?since=134 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51691 - "GET /api/logs?since=134 HTTP/1.1" 200 OK
+2026-10-01 18:11:59,553 httpx INFO: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-10-01 18:11:59,553 backend.ocr WARNING: Original singer failed on model gemini-3.6-flash: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-10-01 18:11:59,553 google_genai.models INFO: AFC is enabled with max remote calls: 10.
+INFO:     127.0.0.1:51691 - "GET /api/logs?since=134 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51691 - "GET /api/logs?since=135 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51691 - "GET /api/logs?since=135 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51691 - "GET /api/logs?since=135 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51691 - "GET /api/logs?since=135 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51691 - "GET /api/logs?since=135 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51691 - "GET /api/logs?since=135 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51691 - "GET /api/search?q=%E0%B6%87%E0%B6%BA%E0%B7%80+%E0%B6%85%E0%B6%B8%E0%B6%AD%E0%B6%9A+%E0%B6%9A%E0%B6%BB%E0%B6%B1%E0%B7%8A%E0%B6%B1+%E0%B7%83%E0%B7%81%E0%B7%92%E0%B6%9A%E0%B7%8F+%E0%B6%B1%E0%B7%92%E0%B7%83%E0%B6%82%E0%B7%83%E0%B6%BD%E0%B7%8F HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51691 - "GET /api/logs?since=135 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51691 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51691 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51691 - "GET /api/logs?since=136 HTTP/1.1" 200 OK
+2026-10-01 18:12:27,625 httpx INFO: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-01 18:12:27,645 backend.ocr INFO: Original singer raw response from gemini-3.5-flash: '[\n  {\n    "title": "ඇයව අමතක කරන්න",\n    "singer": "සශිකා නිසංසලා",\n    "aliases": ["Shashika Nisansala", "Sashika Nisansala", "Shashika Nisansala"],\n    "confidence": "high",\n    "note": "Original song by Shashika Nisansala."\n  },\n  {\n    "title": "ආදරයේ උල්පත වූ අම්මා",\n    "singer": "වික්ටර් රත්නායක",\n    "aliases": ["Victor Rathnayake", "Victor Ratnayake", "Wictor Rathnayake"],\n    "confidence": "high",\n    "note": "Original song by legendary singer and composer Victor Rathnayake."\n  },\n  {\n    "title": "අඳුරට ඉඩ දී",\n    "singer": "රූකාන්ත ගුණතිලක",\n    "aliases": ["Rookantha Goonatillake", "Rookantha Gunathilake", "Rukantha Gunathilaka"],\n    "confidence": "high",\n    "note": "Original track from Rookantha Goonatillake\'s solo releases."\n  },\n  {\n    "title": "එදා රෑ",\n    "singer": "මිල්ටන් මල්ලවආරච්චි",\n    "aliases": ["Milton Mallawarachchi", "Milton Mallawaarachchi", "Milton Mallawarachchy"],\n    "confidence": "high",\n    "note": "Original classic by Milton Mallawarachchi."\n  '
+INFO:     127.0.0.1:51648 - "POST /api/originals HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51691 - "GET /api/logs?since=137 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/search?q=%E0%B6%87%E0%B6%BA%E0%B7%80+%E0%B6%85%E0%B6%B8%E0%B6%AD%E0%B6%9A+%E0%B6%9A%E0%B6%BB%E0%B6%B1%E0%B7%8A%E0%B6%B1&singer=%E0%B7%83%E0%B7%81%E0%B7%92%E0%B6%9A%E0%B7%8F+%E0%B6%B1%E0%B7%92%E0%B7%83%E0%B6%82%E0%B7%83%E0%B6%BD%E0%B7%8F&singer=Shashika+Nisansala&singer=Sashika+Nisansala&singer=Shashika+Nisansala HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=139 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=140 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/search?q=%E0%B6%86%E0%B6%AF%E0%B6%BB%E0%B6%BA%E0%B7%9A+%E0%B6%8B%E0%B6%BD%E0%B7%8A%E0%B6%B4%E0%B6%AD+%E0%B7%80%E0%B7%96+%E0%B6%85%E0%B6%B8%E0%B7%8A%E0%B6%B8%E0%B7%8F&singer=%E0%B7%80%E0%B7%92%E0%B6%9A%E0%B7%8A%E0%B6%A7%E0%B6%BB%E0%B7%8A+%E0%B6%BB%E0%B6%AD%E0%B7%8A%E0%B6%B1%E0%B7%8F%E0%B6%BA%E0%B6%9A&singer=Victor+Rathnayake&singer=Victor+Ratnayake&singer=Wictor+Rathnayake HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56865 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56865 - "GET /api/logs?since=140 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56865 - "GET /api/logs?since=142 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/search?q=%E0%B6%85%E0%B6%B3%E0%B7%94%E0%B6%BB%E0%B6%A7+%E0%B6%89%E0%B6%A9+%E0%B6%AF%E0%B7%93&singer=%E0%B6%BB%E0%B7%96%E0%B6%9A%E0%B7%8F%E0%B6%B1%E0%B7%8A%E0%B6%AD+%E0%B6%9C%E0%B7%94%E0%B6%AB%E0%B6%AD%E0%B7%92%E0%B6%BD%E0%B6%9A&singer=Rookantha+Goonatillake&singer=Rookantha+Gunathilake&singer=Rukantha+Gunathilaka HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=142 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56865 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/search?q=%E0%B6%91%E0%B6%AF%E0%B7%8F+%E0%B6%BB%E0%B7%91&singer=%E0%B6%B8%E0%B7%92%E0%B6%BD%E0%B7%8A%E0%B6%A7%E0%B6%B1%E0%B7%8A+%E0%B6%B8%E0%B6%BD%E0%B7%8A%E0%B6%BD%E0%B7%80%E0%B6%86%E0%B6%BB%E0%B6%A0%E0%B7%8A%E0%B6%A0%E0%B7%92&singer=Milton+Mallawarachchi&singer=Milton+Mallawaarachchi&singer=Milton+Mallawarachchy HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=143 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56865 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/search?q=%E0%B7%83%E0%B6%B3+%E0%B6%AD%E0%B6%BB%E0%B7%94+%E0%B6%B8%E0%B6%BD%E0%B7%8A&singer=%E0%B6%85%E0%B6%AD%E0%B7%94%E0%B6%BD+%E0%B6%85%E0%B6%B0%E0%B7%92%E0%B6%9A%E0%B7%8F%E0%B6%BB%E0%B7%92+%26+%E0%B7%83%E0%B6%B8%E0%B7%92%E0%B6%AD%E0%B7%8F+%E0%B6%B8%E0%B7%94%E0%B6%AF%E0%B7%94%E0%B6%B1%E0%B7%8A%E0%B6%9A%E0%B7%9C%E0%B6%A7%E0%B7%94%E0%B7%80&singer=Athula+%26+Samitha&singer=Athula+Adikari+%26+Samitha+Mudunkotuwa&singer=Athula+and+Samitha HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=145 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56865 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56865 - "GET /api/logs?since=147 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/search?q=%E0%B6%B8%E0%B7%9A+%E0%B6%85%E0%B6%BA%E0%B7%94%E0%B6%BB%E0%B7%92%E0%B6%B1%E0%B7%8A+%E0%B6%85%E0%B6%B4%E0%B7%92&singer=%E0%B6%A7%E0%B7%93.%E0%B6%91%E0%B6%B8%E0%B7%8A.+%E0%B6%A2%E0%B6%BA%E0%B6%BB%E0%B6%AD%E0%B7%8A%E0%B6%B1&singer=T.M.+Jayarathna&singer=T.+M.+Jayarathna&singer=TM+Jayarathna&singer=T.M.+Jayaratne HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=148 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56865 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56865 - "GET /api/logs?since=149 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/search?q=%E0%B6%B1%E0%B7%94%E0%B7%80%E0%B6%BB+%E0%B7%80%E0%B7%90%E0%B7%80%E0%B7%9A&singer=%E0%B6%9C%E0%B7%94%E0%B6%AB%E0%B6%AF%E0%B7%8F%E0%B7%83+%E0%B6%9A%E0%B6%B4%E0%B7%94%E0%B6%9C%E0%B7%9A&singer=Gunadasa+Kapuge&singer=Visharada+Gunadasa+Kapuge&singer=Kapunis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=150 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=151 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=151 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=151 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64133 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64133 - "GET /api/logs?since=151 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/search?q=%E0%B7%80%E0%B6%BB%E0%B7%8A%E0%B6%AD%E0%B6%B8%E0%B7%8F%E0%B6%B1%E0%B6%BA%E0%B7%9A&singer=%E0%B6%BB%E0%B7%96%E0%B6%9A%E0%B7%8F%E0%B6%B1%E0%B7%8A%E0%B6%AD+%E0%B6%9C%E0%B7%94%E0%B6%AB%E0%B6%AD%E0%B7%92%E0%B6%BD%E0%B6%9A&singer=Rookantha+Goonatillake&singer=Rookantha+Gunathilake&singer=Rukantha+Gunathilaka HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=152 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64133 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/search?q=%E0%B7%84%E0%B7%90%E0%B6%B8%E0%B6%AF%E0%B7%8F%E0%B6%B8%E0%B6%AD%E0%B7%8A&singer=%E0%B6%BB%E0%B7%96%E0%B6%9A%E0%B7%8F%E0%B6%B1%E0%B7%8A%E0%B6%AD+%E0%B6%9C%E0%B7%94%E0%B6%AB%E0%B6%AD%E0%B7%92%E0%B6%BD%E0%B6%9A&singer=Rookantha+Goonatillake&singer=Rookantha+Gunathilake&singer=Rukantha+Gunathilaka HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=153 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=155 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61397 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/search?q=%E0%B7%83%E0%B6%B3%E0%B7%94%E0%B6%B1%E0%B7%8A+%E0%B6%9A%E0%B7%90%E0%B6%BD%E0%B7%9A&singer=%E0%B7%83%E0%B7%9D%E0%B6%B8%E0%B6%AD%E0%B7%92%E0%B6%BD%E0%B6%9A+%E0%B6%A2%E0%B6%BA%E0%B6%B8%E0%B7%84&singer=Somathilaka+Jayamaha&singer=Somathilake+Jayamaha HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=155 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=157 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62370 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/search?q=%E0%B6%BB%E0%B6%B1%E0%B7%8A+%E0%B6%9A%E0%B7%99%E0%B6%B1%E0%B7%8A%E0%B6%AF%E0%B7%99%E0%B6%B1%E0%B7%8A+%E0%B6%B6%E0%B7%90%E0%B6%B3&singer=%E0%B6%B1%E0%B6%B1%E0%B7%8A%E0%B6%AF%E0%B7%8F+%E0%B6%B8%E0%B7%8F%E0%B6%BD%E0%B7%92%E0%B6%B1%E0%B7%93&singer=Nanda+Malini&singer=Nanda+Malinee&singer=Nanda+Maliniya HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=157 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=159 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50846 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50846 - "GET /api/logs?since=159 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/search?q=%E0%B7%80%E0%B7%92%E0%B6%BA%E0%B7%9D%E0%B7%80%E0%B7%96+%E0%B6%B4%E0%B7%83%E0%B7%94%E0%B7%80%E0%B6%BA%E0%B7%92+%E0%B6%86%E0%B6%AF%E0%B6%BB%E0%B6%BA%E0%B7%9A&singer=%E0%B6%B8%E0%B7%92%E0%B6%BD%E0%B7%8A%E0%B6%A7%E0%B6%B1%E0%B7%8A+%E0%B6%B8%E0%B6%BD%E0%B7%8A%E0%B6%BD%E0%B7%80%E0%B6%86%E0%B6%BB%E0%B6%A0%E0%B7%8A%E0%B6%A0%E0%B7%92&singer=Milton+Mallawarachchi&singer=Milton+Mallawaarachchi&singer=Milton+Mallawarachchy HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=160 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64195 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/search?q=%E0%B6%9A%E0%B7%94%E0%B6%BB%E0%B7%94%E0%B7%85%E0%B7%94+%E0%B6%B4%E0%B7%91%E0%B6%BD%E0%B7%80%E0%B7%9A HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=161 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=163 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=163 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50938 - "GET /api/logs?since=163 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/search?q=%E0%B6%B8%E0%B6%BD%E0%B7%8A+%E0%B7%83%E0%B6%BB%E0%B6%AD%E0%B7%8A+%E0%B6%B8%E0%B6%BD%E0%B7%8A+%E0%B7%83%E0%B7%90%E0%B6%B3%E0%B7%91 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50938 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50938 - "GET /api/logs?since=163 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/search?q=%E0%B6%B1%E0%B7%92%E0%B6%BD%E0%B7%8A+%E0%B6%B1%E0%B7%92%E0%B6%BD%E0%B7%8A+%E0%B6%AF%E0%B7%91%E0%B7%83%E0%B7%9A HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50938 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50938 - "GET /api/logs?since=165 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/search?q=%E0%B6%BD%E0%B7%9C%E0%B7%80%E0%B7%92%E0%B6%B1%E0%B7%8A+%E0%B7%80%E0%B7%92%E0%B7%83%E0%B7%92%E0%B6%AD%E0%B7%94%E0%B6%BB%E0%B7%94&singer=%E0%B6%B8%E0%B7%92%E0%B6%BD%E0%B7%8A%E0%B6%A7%E0%B6%B1%E0%B7%8A+%E0%B6%B8%E0%B6%BD%E0%B7%8A%E0%B6%BD%E0%B7%80%E0%B6%86%E0%B6%BB%E0%B6%A0%E0%B7%8A%E0%B6%A0%E0%B7%92&singer=Milton+Mallawarachchi&singer=Milton+Mallawaarachchi&singer=Milton+Mallawarachchy HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=167 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50938 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/search?q=%E0%B6%B8%E0%B7%9A+%E0%B6%B1%E0%B6%9C%E0%B6%BB%E0%B6%BA&singer=%E0%B6%B8%E0%B6%BB%E0%B7%8A%E0%B7%80%E0%B7%92%E0%B6%B1%E0%B7%8A+%E0%B6%B4%E0%B7%99%E0%B6%BB%E0%B7%9A%E0%B6%BB%E0%B7%8F&singer=Mervyn+Perera&singer=Mervin+Perera&singer=Mervyn+Preera HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=168 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=170 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50938 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/search?q=%E0%B6%BB%E0%B6%AD%E0%B7%94+%E0%B6%B1%E0%B7%99%E0%B7%85%E0%B7%94%E0%B6%B8%E0%B7%8A+%E0%B6%B4%E0%B7%93%E0%B6%AF%E0%B7%92%E0%B6%BD%E0%B7%8F&singer=%E0%B7%83%E0%B7%9D%E0%B6%B8%E0%B6%AD%E0%B7%92%E0%B6%BD%E0%B6%9A+%E0%B6%A2%E0%B6%BA%E0%B6%B8%E0%B7%84&singer=Somathilaka+Jayamaha&singer=Somathilake+Jayamaha HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=170 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=172 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=172 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62387 - "GET /api/logs?since=172 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/search?q=%E0%B6%9A%E0%B7%80%E0%B6%AF%E0%B7%8F+%E0%B7%84%E0%B6%B8%E0%B7%94%E0%B7%80%E0%B7%9A%E0%B6%AF&singer=%E0%B6%B8%E0%B7%92%E0%B6%BD%E0%B7%8A%E0%B6%A7%E0%B6%B1%E0%B7%8A+%E0%B6%B8%E0%B6%BD%E0%B7%8A%E0%B6%BD%E0%B7%80%E0%B6%86%E0%B6%BB%E0%B6%A0%E0%B7%8A%E0%B6%A0%E0%B7%92&singer=Milton+Mallawarachchi&singer=Milton+Mallawaarachchi&singer=Milton+Mallawarachchy HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=172 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=173 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=173 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=173 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=173 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=173 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53517 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53517 - "GET /api/logs?since=173 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/search?q=%E0%B7%84%E0%B7%9A%E0%B6%B1%E0%B7%8A+%E0%B6%9A%E0%B7%94%E0%B6%BB%E0%B7%84%E0%B6%B1%E0%B7%8A+%E0%B6%B4%E0%B7%90%E0%B6%BD%E0%B7%9A&singer=%E0%B7%83%E0%B7%9D%E0%B6%B8%E0%B6%AD%E0%B7%92%E0%B6%BD%E0%B6%9A+%E0%B6%A2%E0%B6%BA%E0%B6%B8%E0%B7%84&singer=Somathilaka+Jayamaha&singer=Somathilake+Jayamaha HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=174 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=175 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=175 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=175 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=175 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51285 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/search?q=%E0%B6%AF%E0%B7%99%E0%B7%83%E0%B7%92%E0%B6%AD%E0%B6%9A+%E0%B7%83%E0%B7%99%E0%B6%B1%E0%B7%99%E0%B7%84%E0%B7%83&singer=%E0%B6%9A%E0%B7%94%E0%B6%B8%E0%B7%8F%E0%B6%BB%E0%B7%83%E0%B7%92%E0%B6%BB%E0%B7%92+%E0%B6%B4%E0%B6%AD%E0%B7%92%E0%B6%BB%E0%B6%AB&singer=Kumarasiri+Pathirana&singer=Kumarasiri+Pathirana HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=175 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=177 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=177 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64960 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64960 - "GET /api/logs?since=177 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/search?q=%E0%B6%B6%E0%B7%9D%E0%B7%80%E0%B7%92%E0%B6%A7%E0%B7%92%E0%B6%BA%E0%B7%8F+%E0%B6%AF%E0%B6%B1%E0%B7%8A+%E0%B7%80%E0%B7%90%E0%B6%BD%E0%B7%9A&singer=%E0%B7%83%E0%B6%B1%E0%B6%AD%E0%B7%8A+%E0%B6%B1%E0%B6%B1%E0%B7%8A%E0%B6%AF%E0%B7%83%E0%B7%92%E0%B6%BB%E0%B7%92&singer=Sanath+Nandasiri&singer=Visharada+Sanath+Nandasiri HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=178 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=179 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=179 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=179 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=179 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=179 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=179 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+2026-10-01 18:15:29,443 google_genai.models INFO: AFC is enabled with max remote calls: 10.
+2026-10-01 18:15:30,044 httpx INFO: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-10-01 18:15:30,045 backend.ocr WARNING: More songs failed on model gemini-3.8-flash: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash\nPlease retry in 30.567369162s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-3.8-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '30s'}]}}
+2026-10-01 18:15:30,045 google_genai.models INFO: AFC is enabled with max remote calls: 10.
+2026-10-01 18:15:30,596 httpx INFO: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.7-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-10-01 18:15:30,596 backend.ocr WARNING: More songs failed on model gemini-3.7-flash: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.7-flash\nPlease retry in 30.014791953s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-3.7-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '30s'}]}}
+2026-10-01 18:15:30,596 google_genai.models INFO: AFC is enabled with max remote calls: 10.
+2026-10-01 18:15:31,117 httpx INFO: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-10-01 18:15:31,118 backend.ocr WARNING: More songs failed on model gemini-3.6-flash: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.6-flash\nPlease retry in 29.493401836s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.6-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '29s'}]}}
+2026-10-01 18:15:31,118 google_genai.models INFO: AFC is enabled with max remote calls: 10.
+INFO:     127.0.0.1:55132 - "GET /api/logs?since=179 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55132 - "GET /api/logs?since=183 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55132 - "GET /api/logs?since=183 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55132 - "GET /api/logs?since=183 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55132 - "GET /api/logs?since=183 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55132 - "GET /api/logs?since=183 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55132 - "GET /api/logs?since=183 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55132 - "GET /api/logs?since=183 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55132 - "GET /api/logs?since=183 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55132 - "GET /api/logs?since=183 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55132 - "GET /api/logs?since=183 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55132 - "GET /api/logs?since=183 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55132 - "GET /api/logs?since=183 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55132 - "GET /api/logs?since=183 HTTP/1.1" 200 OK
+2026-10-01 18:16:12,371 httpx INFO: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-01 18:16:12,400 backend.ocr INFO: More songs raw response from gemini-3.5-flash: '[\n  {\n    "singer": "සශිකා නිසංසලා (Shashika Nisansala, Sashika Nisansala, Shashika Nisansala)",\n    "songs": [\n      {"title": "ඔබ තරම් පෙම් කළ", "title_en": "Oba Tharam Pem Kala"},\n      {"title": "හීන තෝර තෝරා", "title_en": "Heena Thora Thora"},\n      {"title": "තරුමල් නිවා", "title_en": "Tharumal Niwa"},\n      {"title": "පාරමී නොපිරූ", "title_en": "Parami Nopiru"},\n      {"title": "මල් කැකුළියෙන්", "title_en": "Mal Kekuliyen"},\n      {"title": "දෑසින් පෑ", "title_en": "Daasin Paa"},\n      {"title": "සෙනෙහස ඉල්ලා", "title_en": "Senehasa Illa"},\n      {"title": "සඳ එළිය ගලන රෑක", "title_en": "Sanda Eliya Galana Raaka"}\n    ]\n  },\n  {\n    "singer": "වික්ටර් රත්නායක (Victor Rathnayake, Victor Ratnayake, Wictor Rathnayake)",\n    "songs": [\n      {"title": "සිනා තොටක්", "title_en": "Sina Thotak"},\n      {"title": "තොටුපළ අයිනේ", "title_en": "Thotupala Eine"},\n      {"title": "සිහින සතක්", "title_en": "Sihina Sathak"},\n      {"title": "තනි තරුවේ", "title_en": "Thani Tharuwe"},\n      {"tit'
+INFO:     127.0.0.1:55132 - "GET /api/logs?since=183 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55132 - "GET /api/logs?since=185 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55132 - "GET /api/logs?since=185 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55132 - "GET /api/logs?since=185 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55132 - "GET /api/logs?since=186 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55132 - "GET /api/logs?since=186 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55132 - "GET /api/logs?since=187 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55132 - "GET /api/logs?since=187 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55132 - "GET /api/logs?since=188 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55132 - "GET /api/logs?since=189 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55132 - "GET /api/logs?since=189 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55132 - "GET /api/logs?since=189 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55132 - "GET /api/logs?since=189 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55132 - "GET /api/logs?since=190 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55132 - "GET /api/logs?since=190 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55132 - "GET /api/logs?since=191 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55132 - "GET /api/logs?since=191 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55132 - "GET /api/logs?since=192 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55132 - "GET /api/logs?since=192 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55132 - "GET /api/logs?since=192 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55132 - "GET /api/logs?since=193 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55132 - "GET /api/logs?since=193 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55132 - "GET /api/logs?since=193 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55132 - "GET /api/logs?since=194 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55132 - "GET /api/logs?since=194 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55132 - "GET /api/logs?since=195 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55132 - "GET /api/logs?since=195 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55132 - "GET /api/logs?since=196 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/more-songs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=196 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=197 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=197 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=197 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=197 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=197 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=197 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=199 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=202 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=204 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=206 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=208 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=210 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=212 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=215 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=218 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=221 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=224 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=227 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=230 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=232 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=235 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=238 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "POST /api/save HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=241 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57577 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57577 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57577 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57577 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57577 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57577 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57577 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57577 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57577 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57577 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57577 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57577 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57577 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57577 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57577 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57577 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57577 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57577 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57577 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57577 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57577 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57577 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57577 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57577 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57577 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57577 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57577 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57577 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57577 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57577 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57577 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57577 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57577 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57577 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57577 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57577 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57577 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57577 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57577 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57577 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57577 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57577 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57577 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57577 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57577 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57577 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57577 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57577 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /style.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60964 - "GET /api/logs?since=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "POST /api/expand HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "POST /api/expand HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:65032 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "POST /api/expand HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:65032 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "POST /api/expand HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:65032 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "POST /api/expand HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:65032 - "GET /api/saved HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "POST /api/expand HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65032 - "GET /api/logs?since=244 HTTP/1.1" 200 OK
